@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: OnePageOutline.aux
+The style file: apalike.bst
+Database file #1: /Users/samuelj/Dropbox/Library/library.bib.bib
+Warning--there's a number but no series in kelleher2005discards
+Warning--there's a number but no series in pascoe1997bycatch
+Warning--empty journal in safina2008study
+You've used 23 entries,
+            1935 wiz_defined-function locations,
+            614 strings with 8084 characters,
+and the built_in function-call counts, 9522 in all, are:
+= -- 947
+> -- 395
+< -- 15
++ -- 142
+- -- 132
+* -- 847
+:= -- 1656
+add.period$ -- 71
+call.type$ -- 23
+change.case$ -- 177
+chr.to.int$ -- 23
+cite$ -- 26
+duplicate$ -- 327
+empty$ -- 647
+format.name$ -- 171
+if$ -- 1833
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 23
+newline$ -- 118
+num.names$ -- 69
+pop$ -- 138
+preamble$ -- 1
+purify$ -- 181
+quote$ -- 0
+skip$ -- 252
+stack$ -- 0
+substring$ -- 754
+swap$ -- 35
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 134
+warning$ -- 3
+while$ -- 79
+width$ -- 0
+write$ -- 299
+(There were 3 warnings)

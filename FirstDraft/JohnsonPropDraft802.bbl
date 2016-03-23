@@ -1,0 +1,181 @@
+\begin{thebibliography}{}
+
+\bibitem[Abbott and Wilen, 2009]{Abbott2009195}
+Abbott, J.~K. and Wilen, J.~E. (2009).
+\newblock Regulation of fisheries bycatch with common-pool output quotas.
+\newblock {\em Journal of Environmental Economics and Management}, 57(2):195 --
+  204.
+
+\bibitem[Alverson et~al., 1994]{AlversonEtal1994}
+Alverson, D., Freeberg, M., Pope, J., and Murawski, S. (1994).
+\newblock A global assessment of fisheries bycatch and discards.
+\newblock {\em Food and Agriculture Organization, Fisheries Technical Paper},
+  339:233.
+\newblock Rome.
+
+\bibitem[Beamish and McFarlane, 1988]{beamish1988resident}
+Beamish, R. and McFarlane, C. (1988).
+\newblock Resident and dispersal behavior of adult sablefish (anaplopoma
+  fimbria) in the slope waters off canada's west coast.
+\newblock {\em Canadian Journal of Fisheries and Aquatic Sciences},
+  45(1):152--164.
+
+\bibitem[Branch et~al., 2006]{branch2006replacing}
+Branch, T.~A., Rutherford, K., and Hilborn, R. (2006).
+\newblock Replacing trip limits with individual transferable quotas:
+  implications for discarding.
+\newblock {\em Marine Policy}, 30(3):281--292.
+
+\bibitem[Breiman, 2001]{breiman2001random}
+Breiman, L. (2001).
+\newblock Random forests.
+\newblock {\em Machine learning}, 45(1):5--32.
+
+\bibitem[Brillinger, 2003]{brillinger2003simulating}
+Brillinger, D.~R. (2003).
+\newblock Simulating constrained animal motion using stochastic differential
+  equations.
+\newblock {\em Lecture Notes-Monograph Series}, pages 35--48.
+
+\bibitem[Brillinger et~al., 2001]{brillinger2001use}
+Brillinger, D.~R., Preisler, H.~K., Ager, A.~A., and Kie, J. (2001).
+\newblock The use of potential functions in modelling animal movement.
+\newblock In {\em Selected Works of David Brillinger}, pages 385--409.
+  Springer.
+
+\bibitem[Calenge, 2006]{calenge2006package}
+Calenge, C. (2006).
+\newblock The package ``adehabitat'' for the r software: a tool for the
+  analysis of space and habitat use by animals.
+\newblock {\em Ecological modelling}, 197(3):516--519.
+
+\bibitem[Davies et~al., 2009]{davies2009defining}
+Davies, R., Cripps, S., Nickson, A., and Porter, G. (2009).
+\newblock Defining and estimating global marine fisheries bycatch.
+\newblock {\em Marine Policy}, 33(4):661--672.
+
+\bibitem[{Fisheries and Oceans Canada}, 2010]{PRIFMP2010}
+{Fisheries and Oceans Canada} (2010).
+\newblock {Pacific} region integrated fisheries management plan: Groundfish
+  trawl.
+\newblock {February} 21, 2010 to {February} 20, 2011.
+
+\bibitem[Fishman, 2001]{fishman2001discrete}
+Fishman, G.~S. (2001).
+\newblock {\em Discrete-event simulation: modeling, programming, and analysis}.
+\newblock Springer Science \&amp; Business Media.
+
+\bibitem[{Food and Agriculture Organization of the United Nations},
+  1997]{FAO1997}
+{Food and Agriculture Organization of the United Nations} (1997).
+\newblock Fisheries bycatch and discards.
+\newblock March 17-20, 1997.
+
+\bibitem[Fryxell et~al., 2008]{fryxell2008multiple}
+Fryxell, J.~M., Hazell, M., B{\"o}rger, L., Dalziel, B.~D., Haydon, D.~T.,
+  Morales, J.~M., McIntosh, T., and Rosatte, R.~C. (2008).
+\newblock Multiple movement modes by large herbivores at multiple
+  spatiotemporal scales.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  105(49):19114--19119.
+
+\bibitem[Gelman et~al., 2014]{gelman2014bayesian}
+Gelman, A., Carlin, J.~B., Stern, H.~S., and Rubin, D.~B. (2014).
+\newblock {\em Bayesian data analysis}, volume~2.
+\newblock Taylor \&amp; Francis.
+
+\bibitem[Gilman et~al., 2006]{gilman2006fleet}
+Gilman, E.~L., Dalzell, P., and Martin, S. (2006).
+\newblock Fleet communication to abate fisheries bycatch.
+\newblock {\em Marine Policy}, 30(4):360--366.
+
+\bibitem[Hall and Mainprize, 2005]{hall2005managing}
+Hall, S.~J. and Mainprize, B.~M. (2005).
+\newblock Managing by-catch and discards: how much progress are we making and
+  how can we do better?
+\newblock {\em Fish and Fisheries}, 6(2):134--155.
+
+\bibitem[Hanna et~al., 2008]{hanna2008temperature}
+Hanna, S., Haukenes, A., Foy, R., and Buck, C. (2008).
+\newblock Temperature effects on metabolic rate, swimming performance and
+  condition of pacific cod gadus macrocephalus tilesius.
+\newblock {\em Journal of Fish Biology}, 72(4):1068--1078.
+
+\bibitem[Hanselman et~al., 2009]{hanselman2009assessment}
+Hanselman, D.~H., Lunsford, C.~R., and Rodgveller, C.~J. (2009).
+\newblock Assessment of the sablefish stock in alaska.
+\newblock {\em Stock assessment and fishery evaluation report for the
+  groundfish resources of the GOA and BS/AI as projected for}.
+
+\bibitem[Hastie et~al., 2009]{hastie2009elements}
+Hastie, T., Tibshirani, R., Friedman, J., Hastie, T., Friedman, J., and
+  Tibshirani, R. (2009).
+\newblock {\em The elements of statistical learning}, volume~2.
+\newblock Springer.
+
+\bibitem[Kelleher, 2005]{kelleher2005discards}
+Kelleher, K. (2005).
+\newblock {\em Discards in the world's marine fisheries: an update}.
+\newblock Number 470. Food and Agriculture Organization of the United Nations.
+
+\bibitem[McGarvey and Feenstra, 2002]{mcgarvey2002estimating}
+McGarvey, R. and Feenstra, J.~E. (2002).
+\newblock Estimating rates of fish movement from tag recoveries: conditioning
+  by recapture.
+\newblock {\em Canadian Journal of Fisheries and Aquatic Sciences},
+  59(6):1054--1064.
+
+\bibitem[Nagarajan et~al., 2013]{nagarajan2013bayesian}
+Nagarajan, R., Scutari, M., and L{\`e}bre, S. (2013).
+\newblock {\em Bayesian Networks in R}.
+\newblock Springer.
+
+\bibitem[Nathan et~al., 2008]{nathan2008movement}
+Nathan, R., Getz, W.~M., Revilla, E., Holyoak, M., Kadmon, R., Saltz, D., and
+  Smouse, P.~E. (2008).
+\newblock A movement ecology paradigm for unifying organismal movement
+  research.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  105(49):19052--19059.
+
+\bibitem[Pascoe, 1997]{pascoe1997bycatch}
+Pascoe, S. (1997).
+\newblock {\em Bycatch management and the economics of discarding}.
+\newblock Number 370. Food and Agriculture Organization of the United Nations.
+
+\bibitem[Pelc et~al., 2015]{Pelc201556}
+Pelc, R.~A., Max, L.~M., Norden, W., Roberts, S., Silverstein, R., and Wilding,
+  S.~R. (2015).
+\newblock Further action on bycatch could boost united states fisheries
+  performance.
+\newblock {\em Marine Policy}, 56(0):56 -- 60.
+
+\bibitem[Preisler et~al., 2001]{preisler2001stochastic}
+Preisler, H.~K., Brillinger, D.~R., Ager, A.~A., Kie, J.~G., and Akers, R.~P.
+  (2001).
+\newblock Stochastic differential equations: a tool for studying animal
+  movement.
+\newblock In {\em Proc. IUFRO 4.11 Conference, Greenwich 26-29 June}.
+
+\bibitem[Saila, 1983]{saila1983importance}
+Saila, S.~B. (1983).
+\newblock Importance and assessment of discards in commercial fisheries.
+\newblock {\em Food and Agriculture Organization Fisheries Circular}, 765:623.
+
+\bibitem[Schaefer, 1957]{schaefer1957some}
+Schaefer, M.~B. (1957).
+\newblock Some considerations of population dynamics and economics in relation
+  to the management of the commercial marine fisheries.
+\newblock {\em Journal of the Fisheries Board of Canada}, 14(5):669--681.
+
+\bibitem[Stewart et~al., 2011]{stewart2011status}
+Stewart, I.~J., Thorson, J.~T., and Wetzel, C. (2011).
+\newblock Status of the us sablefish resource in 2011.
+\newblock {\em Pacific Fishery Management Council, Portland, OR}, 441.
+
+\bibitem[Vilela and Bellido, 2015]{vilela2015fishing}
+Vilela, R. and Bellido, J.~M. (2015).
+\newblock Fishing suitability maps: helping fishermen reduce discards.
+\newblock {\em Canadian Journal of Fisheries and Aquatic Sciences}, (ja).
+
+\end{thebibliography}

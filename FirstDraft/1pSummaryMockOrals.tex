@@ -1,0 +1,85 @@
+% A one page summary of my thesis proposal.
+\documentclass[11pt]{article}
+\usepackage[letterpaper]{geometry}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{natbib,setspace,lineno}
+\usepackage{fancyhdr}
+
+\lhead{Samuel Johnson} 
+\rhead{REM802 Mock Oral}
+
+\pagestyle{fancy}
+
+\newcommand{\dc}{{\color{red} \it (Data Collection)}}
+\newcommand{\dr}{{\color{red} \it (Data Reuse)}}
+\newcommand{\du}{{\color{red} \it (Data Use)}}
+\newcommand{\SabLatin}{{\it Anoplopoma fimbria}}
+
+\newcommand{\sj}[1]{{\color{red}\mbox{}\marginpar{\raggedleft\hspace{0pt}*} SJ: #1}}
+
+
+\begin{document}
+
+\subsection*{Data Oriented Approaches for Avoiding Bycatch in BC's Coastal Groundfish Fisheries.}
+
+Fisheries with a poor record of environmental stewardship are coming under increased consumer pressure with the emergence of supermarket rating of products by eco-certification groups. One of the major factors of the rating is the impact of the fishery on biodiversity. A leading impact on biodiversity is the fishing induced mortality of non-target organisms, also known as bycatch. Global estimates of bycatch mortality vary, but have been estimated at up to $40.4\%$ of global marine removals in the early 2000s \citep{davies2009defining}.
+
+Sablefish in BC are part of a directed fishery for which stocks have been in decline for some time. One theory explaining the decline of sablefish stocks is that the discarding of juveniles caught as bycatch in other fisheries has a negative effect on the spawning stock abundance. For instance, between the fishing years 1997/1998 and 2005/2006, the BC integrated Groundfish Trawl Fishery (GTF) discarded approximately $2935$ tonnes of juvenile sablefish. Despite the prevalence of the theory, the economic and ecological impacts of juvenile discarding and associated mortality on the sablefish fishery are currently unquantified.
+
+We propose the study of data oriented approaches for avoiding bycatch in multispecies fisheries. The study will focus on the discarding of juvenile sablefish in the BC GTF, but methods will be developed with the intention of generalising to other species and other fisheries. In addition, we will develop a bio-economic model to study the economic and ecological impact of juvenile discarding on the sablefish fishery.
+
+\subsection*{Chapter 1: What is the economic cost of discarding juvenile sablefish?}
+Not every unmarketable sablefish survives the discarding process, and this affects spawning stock abundance. This loss to future spawning potential is therefore an external cost to the sablefish fishery, but the extent of the impact of this cost on the fishery as a whole is unquantified. We aim to quantify this impact using a bio-economic model of the sablefish fishery.
+
+\subsubsection*{Methods:} 
+\begin{itemize}
+  \item Bio-economic model, initially simplified as a production model with discard-affected recruitment parameter.
+  \item Discounted Cash Flow Analysis of simulated future landings in Sablefish fishery, under a range of different discarding scenarios.
+\end{itemize}
+
+
+\subsection*{Chapter 2: What are the predictors for high volume juvenile discards?}
+Sablefish are a migratory species, with regular movement patterns at the population level. Given the right combination of predictor variables, the question is: can we predict fishing areas with high juvenile sablefish density on a useful time scale?
+
+\subsubsection*{Methods:}
+\begin{itemize}
+  \item We collate spatially explicit commercial juvenile sablefish CPUE data by month or season to account for regularity.
+  \item A sequential Hierarchical Bayesian Spatial Model (HBSM) \citep{lewison2009mapping,sims2008modeling} will be fitted to each time period's data for each year. The result will be a spatial `heat map' of juvenile sablefish density for each time period.
+  \item Each year's data will be fit to a new model, using the previous year's result as a prior distribution.
+\end{itemize}
+
+\subsection*{Chapter 3: How fast can we learn about sablefish movement?}
+Current knowledge of sablefish movement is based on the data from traditional tagging experiments. Unfortunately, this data suffers from low resolution: each tag offers at most 2 data points, often several hundred days and kilometres apart; this leads to a very slow generation of knowledge. Moreover, recaptures occur in around $9\%$ of cases, so sample sizes are necessarily on the order of several thousand per year. In this chapter we develop a simulation model in order to test the efficacy of alternative tagging programmes in order to accelerate the learning process, such as using data-logging or acoustic tags. These alternatives are more expensive than traditional tagging programmes, so a power analysis is performed to identify the required sample size, which will determine the cost.
+
+\subsubsection*{Methods}
+\begin{itemize}
+  \item Fish will move according to a stochastic differential equation \citep{brillinger2001use,brillinger2003simulating} made up of a habitat preference potential function and a process error, with multiple movement modes such as home-ranging, migrating, foraging or resting.
+  \item Since the boats can only detect or catch a fish while fishing, boats are simulated using a discrete event simuation approach \citep{perestrello1993discrete}, to assist in gaining computational advantage.
+  \item Resulting system states will be used to generate detection/recapture information under three tagging scenarios:
+    \begin{enumerate}
+      \item traditional tagging;
+      \item acoustic tagging, with detection gear hung from fishing gear; and
+      \item data logging tagging.
+    \end{enumerate}
+  \item Detection/Recapture information will be analysed using appropriate models, assuming both single phase and multi-phase movement behaviour \citep{fryxell2008multiple,righton2008reconstructing}. 
+  \item The resulting fitted models will be compared across the scenarios and to the simulated data so that statistical power and accuracy for each scenario and model can be computed and ranked.
+\end{itemize}
+
+
+\subsection*{Chapter 4: Fleet communication strategies for facilitating bycatch avoidance.}
+In some fisheries in North America fishing vessels convey information about high bycatch rates through fleet communication \citep{gilman2006fleet}. While these communication strategies are effective, they appear to be largely qualitative and ad-hoc in nature. In this chapter we develop a framework for automated fleet communication of juvenile sablefish catch rates, with centralised data collection and analysis for near real-time feedback to harvesters. 
+
+\subsubsection*{Methods:}
+\begin{itemize}
+  \item Field experiment with treatment and control groups, developed in collaboration with harvesters.
+  \item Treatment groups will be given tablets/computers with custom software to report high juvenile sablefish CPUE.
+  \item Centralised data processing takes new information and updates existing spatial model of sablefish densities. The model will be similar to that of Chapter 2, but optimised for a much smaller time period.
+  \item Spatial ``heat map'' of areas with high probability of juvenile sablefish is produced for each day, and distributed via custom software.
+  \item Efficacy is measured by comparison of bycatch with control group.
+\end{itemize}
+
+\bibliographystyle{apalike}
+\bibliography{/Users/samuelj/Dropbox/Library/library.bib}
+
+
+\end{document}

@@ -1,0 +1,24 @@
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {subsection}{\numberline {1.1}Discarding of Sablefish in the BC Integrated Groundfish Trawl Fishery}{5}
+\contentsline {section}{\numberline {2}Can bycatch be predicted?}{6}
+\contentsline {subsection}{\numberline {2.1}Background}{6}
+\contentsline {subsection}{\numberline {2.2}Methods}{7}
+\contentsline {subsection}{\numberline {2.3}Expected Results}{9}
+\contentsline {subsection}{\numberline {2.4}Challenges and Proposed Solutions}{9}
+\contentsline {section}{\numberline {3}What is the cost of sablefish discarding?}{10}
+\contentsline {subsection}{\numberline {3.1}Background}{10}
+\contentsline {subsection}{\numberline {3.2}Methods}{11}
+\contentsline {subsection}{\numberline {3.3}Expected Results:}{11}
+\contentsline {subsection}{\numberline {3.4}Expected Challenges and Proposed Solutions}{11}
+\contentsline {section}{\numberline {4}Can the spatial and temporal resolution of movement data be improved without exploding the cost?}{12}
+\contentsline {subsection}{\numberline {4.1}Background}{12}
+\contentsline {subsection}{\numberline {4.2}Methods}{13}
+\contentsline {subsection}{\numberline {4.3}Expected Results}{16}
+\contentsline {subsection}{\numberline {4.4}Expected Challenges and Proposed Solutions}{16}
+\contentsline {section}{\numberline {5}Fleet communication strategies for avoidance of bycatch.}{18}
+\contentsline {subsection}{\numberline {5.1}Background}{18}
+\contentsline {subsection}{\numberline {5.2}Methods}{18}
+\contentsline {subsection}{\numberline {5.3}Expected Results}{19}
+\contentsline {subsection}{\numberline {5.4}Challenges and Proposed Solutions}{20}
+\contentsline {section}{\numberline {6}Timeline/Budget}{20}
+\contentsline {section}{\numberline {7}Conclusion}{21}

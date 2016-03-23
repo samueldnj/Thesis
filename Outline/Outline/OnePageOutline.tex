@@ -1,0 +1,235 @@
+\documentclass{article}
+\usepackage[letterpaper]{geometry}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{natbib}
+
+\newcommand{\dc}{{\color{red} \it (Data Collection)}}
+\newcommand{\dr}{{\color{red} \it (Data Reuse)}}
+\newcommand{\du}{{\color{red} \it (Data Use)}}
+
+\newcommand{\sj}[1]{{\color{red}\mbox{}\marginpar{\raggedleft\hspace{0pt}*} #1}}
+
+\begin{document}
+
+% ToDo: Break into the two major sections: avoidance and stock assessment. Each of these could be a separate PhD. Then, develop avoidance deeply for 802.
+
+% In future, develop stock assessment deeply, this will give an off the shelf proposal outline for stock assessment. This might encourage a switch, or give a PostDoc proposal.
+
+\subsection*{Data creation, use and reuse to avoid bycatch in BC's groundfish fisheries.}
+
+\begin{itemize}
+  \item {\bf Introduction}
+    \begin{itemize}
+      \item Problem, current knowledge, boundaries
+        \begin{itemize}
+          \item Bycatch, habitat impact and sustainability of fishing efforts are all major concerns of fisheries, worldwide.
+          \item Focus on bycatch:
+            \begin{itemize}
+              \item Definition.
+              \item Bycatch is commonly considered non-commercial species, such as marine mammals and other megafauna, however commercial species are also affected, usually by selective discarding like high-grading.
+              \item \citet{hall2005managing} give a review of fisheries bycatch, citing \citet{AlversonEtal1994} and \citet{kelleher2005discards}. Includes a nice summary of reduction techniques, including techological, social and legislative approaches and an agent oriented approach framework. \sj{harvest more citations from Hall and Mainprize.}
+              \item Avoidance is often gear-based (BRDs, TEDs - grates over trawl nets, circle hooks etc, mesh size) or time/space closure based \sj{Citation}
+              \item Communication also helps prevent bycatch, but regulatory framework can be stifling. \sj{Citation} - \citet{gauvin1995implementation} write about a voluntary communication program \sj{Can't get a copy of the article}
+              \item ITQs for total catch rather than landings are commonly used to encourage harvesters to avoid bycatch species. ASOPs help keep them honest, and without them high-grading can be an issue \citep{branch2004influence} \sj{Check citation here}
+              \item \citet{Abbott2009195} give an economic/game theoretic model for legislative approach of TACs for bycatch, finding that equilibrium behaviour is characterised by excessive discarding, short seasons, foregone target species catch. They also 
+              \item \citet{AlversonEtal1994} found that discard mortality accounted for 17.9 - 39.5 million metric tonnes in the late 1980s \sj{annual figure?}, computing bycatch mortality as a function of landings
+              \item \citet{kelleher2005discards} used a different methodology, computing bycatch mortality as a function of a fishery (area, gear, stock) and produced a most probably figure of around 6.8 million metric tonnes.
+              \item \citet{davies2009defining} attempt to define and estimate global fisheries bycatch. Under their methodology and definition, bycatch accounts for approximately $40\%$ of removals from marine fisheries globally.
+              \item \citet{hall2005managing} suggest that overall reductions in bycatch of between 25\% and 64\% if global fishing fleets can match min - median performance of gear modificiations in experimental studies \sj{Find reasons why gear based methods aren't being picked up - a comparison of gear based methods to data-based methods would be good for economic chapter}
+              \item Costs of bycatch - 4 categories from \citet{hall2005managing}. Also, read \citet{pascoe1997bycatch} - they estimate $\sim20\%$ of removals are discards.
+              \item Why can't we use legislative or gear-based techniques? What about social approaches?
+            \end{itemize}
+          \item Boundary: Bycatch avoidance schemas\sj{?} based on gear (conservation engineering \sj{citation}) are either under-adopted or reaching their maximum potential effectiveness \sj{Citation, or restatement}. Data collected by fisheries are often left dormant either before or after its intended use. There are obvious opportunities for a study of increased data and fleet communication based techniques for bycatch avoidance. \sj{Include info about agent oriented approach, why there might be low adoption}
+        \end{itemize}
+      \item {\bf Overview of contribution:} Major question is `How can data collection, utilisation and reutilisation be improved to facilitate the avoidance of bycatch species?'
+    \end{itemize}
+  \item {\bf Study System: BC coastal groundfish fisheries}          
+    \begin{itemize}
+      \item Groundfish fisheries in BC - Sablefish, Halibut and GTF
+      \item Sablefish are declining, is this due to bycatch in other fisheries?
+      \item Quota for every species that comes over the side, including corals and sponges.
+      \item 100\% ASOP in GTF - one of the most monitored trawl fisheries in the world. Gads of trustworthy data.
+      \item A unique opportunity to study data-based methods for improving conditions in all three areas: bycatch, habitat and sustainability
+      \item juvenile sablefish bycatch in BC GTF - unmarketable sabelfish discarding accounts for $\sim 95\%$ of discarded sablefish. The effect of discarding induced mortality on the stock is unknown.
+      \item {\it Questions:} \sj{Order these, or mention they aren't in any particular order - essentially these will correspond to chapter titles}
+        \begin{itemize}
+          \item {\it What, if any, are the predictors for the presence of non-target species?}
+          \item {\it How can we improve the spatial and temporal resolution of movement data without exploding the cost?}
+          \item {\it How can fleet communication be used to avoid non-target species? What aspects can be automated?}
+          \item {\it What general equipment can be designed to integrate the movement detection and fleet communication into a real-time feedback system to facilitate harvester avoidance of bycatch species?}
+          \item {\it What is the marginal economic benefit for avoided juvenile sablefish bycatch?} \sj{An economic analysis of the costs of discarding now, and the benefits of proposed schemes. Really investigate the reduction in target species from avoidance schemes.}
+        \end{itemize}
+    \end{itemize}
+  \item {\bf Chapter:} Review of movement ecology and bycatch reduction techniques.
+    \begin{itemize}
+      \item In order to successfully avoid something you need to know how it moves. This will require a literature review of movement ecology and bycatch literature. Some selected references are given below. \sj{Take excerpts from these, or find others which are more suitable.}
+      \item Movement
+        \begin{itemize}
+          \item \citep{nathan2008movement}
+          \item \citep{fryxell2008multiple}
+          \item \citep{pittman2003movements}
+          \item \citep{heifetz1991movement}
+          \item \citep{getz2008framework}
+          \item \citep{righton2008reconstructing}
+        \end{itemize}
+      \item Bycatch
+        \begin{itemize}
+          \item \citep{safina2008study}
+          \item \citep{hall2005managing}
+          \item \citep{lewison2009mapping}
+          \item \citep{sims2008modeling}
+          \item \citep{hall2005managing}
+        \end{itemize}
+    \end{itemize}
+  \item {\bf Chapter:} Can we use spatial models to predict seasonal density of (juvenile) sablefish in fishing areas?
+    \begin{itemize}
+      \item Background
+        \begin{itemize}
+          \item bycatch rates in multi-species fisheries are high \sj{citation needed} - can we predict locations with high bycatch rates with sufficient accuracy?
+          \item While sablefish are known to be highly migratory, there is some seasonal regularity to their movement \sj{citation needed}.
+          \item With the right combination of covariates - location, time of year, depth, environmental factors, etc - can we predict locations with high sablefish density at different times of the year, allowing harvesters to redirect efforts away from these areas?
+          \item Question: Is there a drop in profitability when forced to fish elsewhere? \sj{Late addition - possibly better in the economics chapter}
+        \end{itemize}
+      \item Methods
+        \begin{itemize}
+          \item Spatial Modelling (HBSM or similar) \citep{springford2008novel,sims2008modeling,lewison2009mapping}
+            \begin{itemize}
+              \item Collated by season or month
+              \item sequential Bayesian prior predictive modeling - if there is sufficient data - with each year's posterior providing a prior for the following year. This will allow for interior testing of the model.
+            \end{itemize}
+          \item Raw CPUE are not suitable, as bycatch CPUE is not targeted and sensitive to small changes in effort, therefore it must be homogenised and smoothed \sj{explain}. 
+            \begin{itemize}
+              \item removing targeting effect (DPC) \citep{winker2014proof,winker2013comparison}
+              \item Smoothing rates \citep{springford2008novel,sims2008modeling}
+            \end{itemize}
+        \end{itemize}
+      \item Results, Challenges, Solutions
+        \begin{itemize}
+          \item {\it Expected Results: A Bayesian model of spatial behaviour of juvenile sablefish informed by catch data and movement data, collated by season.}
+          \item Challenge: The model might not be any good. Posterior distributions might have a lot of variance, data and priors from previous time periods may be all over the place.
+          \item Challenge: There might be an associated loss in targeted species catch. The lower bycatch rate might lead to an increase in effort, and therefore an increase in absolute bycatch mortality.
+          \item Solution: More resolute movement data.
+        \end{itemize}
+    \end{itemize}
+  \item {\bf Chapter:} A movement model to estimate migration habits and local abundance. \sj{If we're removing content, this might be the first to go.}
+    \begin{itemize}
+      \item Background
+        \begin{itemize}
+          \item Nearshore inlets, which provide a nursery habitat for juvenile sablefish, have been closed to directed sablefish fishing since '94 \sj{citation}. The hope is that the closure will promote productivity in inlets and lead to a spillover effect.
+          \item Inlet surveys have been tagging fish for ~20 years, giving a lot of movement data.
+          \item Question: Are the closures working and providing a source for the fisheries? What is the contribution of nearshore inlets to offshore productivity? \citep{mcgarvey2002estimating,brownie1993capture} \sj{Fill in citations here.}
+        \end{itemize}
+      \item Methods: J-S model for movement and abundance, McG model for movement probabilities.
+      \item Expected Results: A spillover effect is occuring, but fish are being mowed down by other fisheries before recruiting.
+      \item Challenges: 
+        \begin{itemize}
+          \item Controversial results - it's difficult to pin the problems on a gear type.
+          \item Low resolution of movement data - only two data points per tag for traditional tagging experiments.
+        \end{itemize}
+    \end{itemize}
+
+  \item {\bf Chapter:} Avoidance of non-target species in a multispecies fishery through increased resolution of data.
+    \begin{itemize}
+      \item Background
+        \begin{itemize}
+          \item Sablefish are tagged in nearshore inlet surveys and random stratified surveys every year (~3k tags per year in the inlets \sj{confirm})
+          \item While this is good for coarse scale movement data, it provides movement probabilities at the spatial scale of statistical areas and temporal scale of years, with only two data points per fish and mortality necessary for data collection.
+          \item How can we increase the spatial and temporal resolution of the data without exploding the cost?
+        \end{itemize}
+      \item Methods
+        \begin{itemize}
+          \item A power analysis of tagging experiments done through the use of a simulation model of the sablefish fishery.
+          \item An individual based model with Sablefish modeled by SDEs with a habitat preference (depth) and process error and boats modeled using DEVS, where interfishing times, trip length and docking behaviour is based on historical fishing activity. SDEs allow fish paths to be generated at the beginning of the model; DEVS are used because the boats can only possibly detect when fishing gear is deployed - both of these will provide computational advantage.
+          \item Based on an estimated detection efficiency, a record of the detections of simulated fish as if they were acoustically tagged will be compared to detections through mortality (traditional tagging), to check the required sample size for increased resolution of movement behaviour
+        \end{itemize}
+      \item Results, challenges, solutions
+        \begin{itemize}
+          \item Expected results: We expect to build a fairly general and adaptable simulation model which will enable a power analysis and comparison of tagging experiments for increased resolution of movement data.
+          \item Challenges: Acoustic tag sample size will be too large to be feasible.
+          \item Solution: Other tagging options (data loggers) \citep{righton2008reconstructing}, model will be able to be used for this with addition of oceanographic data/model
+        \end{itemize}
+    \end{itemize}
+  \item {\bf Chapter:} Fleet communication strategies for avoidance of bycatch.
+    \begin{itemize}
+      \item Background
+        \begin{itemize}
+          \item \citet{hall2005managing} outline some other communication strategies - there are sometimes $\sim 50\%$ reductions in bycatch of marine mammals. \sj{citation in Mendeley.}
+          \item \citet{gauvin1995implementation} have an example of fleet communication avoidance strategies in the Bering Sea, which is revisited by \citet{gilman2006fleet} \sj{Mine for details - is this any different to what we're thinking about?}
+          \item It's possible that this is already happening among small cliques of harvesters, but it's hard to know if it is, or if it's having any effect.
+          \item We propose a real time communication strategy, which will be combined with spatial models and movement data to provide a real-time map of bycatch hotspots.
+        \end{itemize}
+      \item Methods:
+        \begin{itemize}
+          \item Pilot analysis: individual based model of fishing behaviour in conjunction with spatial model of sablefish from previous chapter.
+          \item Move on to 
+          \item Front-end: iPads (or similar) to report bycatch incidence, direct communications to central hub
+          \item Back-end: central communications hub, receiving data from iPads, updating spatial models and rebroadcasting predictions of bycatch hotspots based on historic data (oceanography, past commercial fishing, environmental effects) and real time feedback from communcations system.
+        \end{itemize}
+      \item Challenges:
+        \begin{itemize}
+          \item expensive, hard to sell to fishers, whether to legislate/regulate?
+          \item A fleet communication program is likely an ineffective strategy to address a fishery's bycatch proble when the incidence of interactions with the bycatch species is a common event and occurs across the fleet's fishing grounds, and in fisheries where there is a lack of economic incentives to reduce bycatch \citep{gilman2006fleet}
+        \end{itemize}
+      \item Solutions: 
+        \begin{itemize}
+          \item A bottom up approach of developing the fleet communications with harvesters. 
+          \item Might require some economic analysis to show future benefits outweigh costs, al la \citet{gilman2006fleet}
+          \item Pilot experiment to show benefits with a control group and a treatment group of boats.
+        \end{itemize}
+
+    \end{itemize}
+  \item {\bf Chapter:} An economic analysis of bycatch and avoidance.
+    \begin{itemize}
+      \item Background
+        \begin{itemize}
+          \item \citet{pascoe1997bycatch} gives a rough outline of the costs of bycatch, with some categorisation
+          \item Categories are well reviewed in \citet{hall2005managing}
+          \item An economic analysis of how much bycatch costs now, and benefits we can expect in the future if some bycatch avoidance strategies in this paper are adopted and effective
+        \end{itemize}
+      \item Methods
+        \begin{itemize}
+          \item Discounted Cash Flow Analysis
+          \item Bioeconomic model for costs of discarding on the fishery and associated industries - will require discounting of future landings lost through lowered productivity.
+          \item Should we include the stock as an individual in the DCF? It might turn a potentially pareto efficient outcome into a not-efficient at all outcome. \sj{Does this make sense?}
+        \end{itemize}
+      \item Results: We expect to find that the bycatch avoidance is potentially pareto efficient, so long as efforts don't need to rise to make up for targeted species loss.
+      \item Challenges:
+        \begin{itemize}
+          \item High variability in many estimates may lead to a worthless outcome.
+        \end{itemize}
+      \item Solutions:
+        \begin{itemize}
+          \item Act like economists: provide point estimates and bury variability \sj{j/k}
+          \item 
+        \end{itemize}
+    \end{itemize}
+  \item {\bf Timeline/Budget}
+    \begin{itemize}
+      \item Modelling and power analyses can begin now, requires little money (subsistence) and data.
+      \item Field experiment for fleet communication perhaps Fall 2015, Spring 2016, requires money for automated data sharing equipment (iPads etc), budget depends on sample size and experimental design. Also requires software development.
+    \end{itemize}
+  \item {\bf Conclusion/Significance/Implications}
+    \begin{itemize}
+      \item Data should be used at least twice.
+      \item With the right resolution on data, sustainability can be improved with low cost.
+      \item There are diminishing returns on sustainabile engineering (gear based bycatch reduction) - data based methods can (hopefully) be used as a substitute
+      \item Talk about how this might be applied elsewhere, in data limited situations, or be used as an argument for improving data resolution in those areas
+      \item Future work
+    \end{itemize}
+\end{itemize}
+
+\bibliographystyle{apalike}
+\bibliography{/Users/samuelj/Dropbox/Library/library.bib}
+
+     
+
+      % \item BC Groundfish Trawl fishery
+      %   \begin{itemize}
+      %     \item Under a lot of scrutiny for bycatch of other commerical species and habitat impact (though this is quite positive now, see Scott Wallace's videos at DavidSuzuki.org)
+      %     \item manages 55 stock area pairs, but achieves 4 stock assessments per year.
+      %     \item Scott Wallace/David Suzuki Foundation give their partial thumbs up, have worked with GF trawl for many years to improve their performance
+      %     \item SeaChoice (an ecocertification group) gives 88\% of BC GF trawl product their approval
+      
+      %   \end{itemize}
+
+\end{document}

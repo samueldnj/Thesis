@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: FirstDraft.aux
+The style file: apalike.bst
+Database file #1: /Users/samuelj/Dropbox/Library/library.bib.bib
+Warning--I didn't find a database entry for "PRIFMP2010"
+Warning--can't use both volume and number fields in hastie2009elements
+Warning--there's a number but no series in kelleher2005discards
+Warning--there's a number but no series in pascoe1997bycatch
+Warning--there's a number but no volume in vilela2015fishing
+You've used 24 entries,
+            1935 wiz_defined-function locations,
+            620 strings with 7976 characters,
+and the built_in function-call counts, 9622 in all, are:
+= -- 927
+> -- 436
+< -- 15
++ -- 154
+- -- 148
+* -- 868
+:= -- 1708
+add.period$ -- 75
+call.type$ -- 24
+change.case$ -- 189
+chr.to.int$ -- 24
+cite$ -- 28
+duplicate$ -- 329
+empty$ -- 643
+format.name$ -- 182
+if$ -- 1833
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 28
+newline$ -- 124
+num.names$ -- 72
+pop$ -- 155
+preamble$ -- 1
+purify$ -- 194
+quote$ -- 0
+skip$ -- 245
+stack$ -- 0
+substring$ -- 662
+swap$ -- 28
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 134
+warning$ -- 4
+while$ -- 74
+width$ -- 0
+write$ -- 313
+(There were 5 warnings)

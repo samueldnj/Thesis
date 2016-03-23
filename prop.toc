@@ -1,0 +1,24 @@
+\contentsline {section}{\nonumberline Introduction}{3}{section*.2}
+\contentsline {subsection}{\nonumberline Background}{3}{section*.3}
+\contentsline {subsection}{\nonumberline Technical Interactions in Multispecies Fisheries}{5}{section*.4}
+\contentsline {subsection}{\nonumberline Assess and Avoid}{9}{section*.5}
+\contentsline {subsection}{\nonumberline Study System}{13}{section*.6}
+\contentsline {section}{\nonumberline Chapter 1: Estimating Coastwide Abundance and Productivity in a Multispecies Groundfish Fishery via a Hierarchical Stock Assessment Model}{15}{section*.7}
+\contentsline {subsection}{\nonumberline Background}{15}{section*.8}
+\contentsline {subsection}{\nonumberline Methods}{17}{section*.9}
+\contentsline {subsection}{\nonumberline Expected Results}{20}{section*.10}
+\contentsline {section}{\nonumberline Chapter 2: Adding Multistock Structure to Multispecies Hierarchical Stock Assessment Models}{21}{section*.11}
+\contentsline {subsection}{\nonumberline Background}{21}{section*.12}
+\contentsline {subsection}{\nonumberline Methods}{23}{section*.13}
+\contentsline {subsection}{\nonumberline Expected Results}{24}{section*.14}
+\contentsline {section}{\nonumberline Chapter 3: Performance of a Management Procedure Using an Hierarchical Stock Assessment Model for a Multispecies Groundfish Fishery}{25}{section*.15}
+\contentsline {subsection}{\nonumberline Background}{25}{section*.16}
+\contentsline {subsection}{\nonumberline Methods}{27}{section*.17}
+\contentsline {subsection}{\nonumberline Expected Results}{28}{section*.18}
+\contentsline {section}{\nonumberline Chapter 4: Avoiding non-target species.}{29}{section*.19}
+\contentsline {subsection}{\nonumberline Introduction}{29}{section*.20}
+\contentsline {subsection}{\nonumberline Methods}{32}{section*.21}
+\contentsline {subsection}{\nonumberline Expected Results}{34}{section*.22}
+\contentsline {section}{\nonumberline Conclusions}{35}{section*.23}
+\contentsline {subsection}{\nonumberline Resource allocation improvement (taken from intro)}{36}{section*.24}
+\contentsline {section}{\nonumberline Biblography}{37}{section*.25}

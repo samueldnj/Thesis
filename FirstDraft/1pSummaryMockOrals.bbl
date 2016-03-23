@@ -1,0 +1,57 @@
+\begin{thebibliography}{}
+
+\bibitem[Brillinger, 2003]{brillinger2003simulating}
+Brillinger, D.~R. (2003).
+\newblock Simulating constrained animal motion using stochastic differential
+  equations.
+\newblock {\em Lecture Notes-Monograph Series}, pages 35--48.
+
+\bibitem[Brillinger et~al., 2001]{brillinger2001use}
+Brillinger, D.~R., Preisler, H.~K., Ager, A.~A., and Kie, J. (2001).
+\newblock The use of potential functions in modelling animal movement.
+\newblock In {\em Selected Works of David Brillinger}, pages 385--409.
+  Springer.
+
+\bibitem[Davies et~al., 2009]{davies2009defining}
+Davies, R., Cripps, S., Nickson, A., and Porter, G. (2009).
+\newblock Defining and estimating global marine fisheries bycatch.
+\newblock {\em Marine Policy}, 33(4):661--672.
+
+\bibitem[Fryxell et~al., 2008]{fryxell2008multiple}
+Fryxell, J.~M., Hazell, M., B{\"o}rger, L., Dalziel, B.~D., Haydon, D.~T.,
+  Morales, J.~M., McIntosh, T., and Rosatte, R.~C. (2008).
+\newblock Multiple movement modes by large herbivores at multiple
+  spatiotemporal scales.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  105(49):19114--19119.
+
+\bibitem[Gilman et~al., 2006]{gilman2006fleet}
+Gilman, E.~L., Dalzell, P., and Martin, S. (2006).
+\newblock Fleet communication to abate fisheries bycatch.
+\newblock {\em Marine Policy}, 30(4):360--366.
+
+\bibitem[Lewison et~al., 2009]{lewison2009mapping}
+Lewison, R.~L., Soykan, C.~U., and Franklin, J. (2009).
+\newblock Mapping the bycatch seascape: multispecies and multi-scale spatial
+  patterns of fisheries bycatch.
+\newblock {\em Ecological Applications}, 19(4):920--930.
+
+\bibitem[Perestrello~de Vasconcelos and Zeigler, 1993]{perestrello1993discrete}
+Perestrello~de Vasconcelos, M.~J. and Zeigler, B.~P. (1993).
+\newblock Discrete-event simulation of forest landscape response to fire
+  disturbances.
+\newblock {\em Ecological Modelling}, 65(3):177--198.
+
+\bibitem[Righton and Mills, 2008]{righton2008reconstructing}
+Righton, D. and Mills, C.~M. (2008).
+\newblock Reconstructing the movements of free-ranging demersal fish in the
+  north sea: a data-matching and simulation method.
+\newblock {\em Marine Biology}, 153(4):507--521.
+
+\bibitem[Sims et~al., 2008]{sims2008modeling}
+Sims, M., Cox, T., and Lewison, R. (2008).
+\newblock Modeling spatial patterns in fisheries bycatch: improving bycatch
+  maps to aid fisheries management.
+\newblock {\em Ecological applications}, 18(3):649--661.
+
+\end{thebibliography}
