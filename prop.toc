@@ -17,8 +17,8 @@
 \contentsline {subsection}{\nonumberline Expected Results}{28}{section*.18}
 \contentsline {section}{\nonumberline Chapter 4: Avoiding non-target species.}{29}{section*.19}
 \contentsline {subsection}{\nonumberline Introduction}{29}{section*.20}
-\contentsline {subsection}{\nonumberline Methods}{32}{section*.21}
-\contentsline {subsection}{\nonumberline Expected Results}{34}{section*.22}
-\contentsline {section}{\nonumberline Conclusions}{35}{section*.23}
-\contentsline {subsection}{\nonumberline Resource allocation improvement (taken from intro)}{36}{section*.24}
-\contentsline {section}{\nonumberline Biblography}{37}{section*.25}
+\contentsline {subsection}{\nonumberline Methods}{31}{section*.21}
+\contentsline {subsection}{\nonumberline Expected Results}{32}{section*.22}
+\contentsline {section}{\nonumberline Conclusions}{33}{section*.23}
+\contentsline {subsection}{\nonumberline Resource allocation improvement (taken from intro)}{34}{section*.24}
+\contentsline {section}{\nonumberline Biblography}{35}{section*.25}

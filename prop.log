@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  23 MAR 2016 08:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  24 MAR 2016 12:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -547,7 +547,13 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 731.
  [29] [30]
-[31] [32] [33] [34] [35]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¤ in font cmr12!
+
+[31]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¤ in font cmr12!
+ [32] [33]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ¢ in font cmr12!
@@ -563,54 +569,56 @@ Missing character: There is no ¢ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ¢ in font cmr12!
- [36] [37] [38] [39]
+ [34] [35] [36] [37]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ® in font cmr12!
 
-Overfull \hbox (2.13031pt too wide) in paragraph at lines 1103--1105
+Overfull \hbox (2.13031pt too wide) in paragraph at lines 1020--1022
 []\OT1/cmr/m/n/12 Gelman, A., Car-lin, J. B., Stern, H. S., & Ru-bin, D. B. (20
 14). \OT1/cmr/m/it/12 Bayesian
  []
 
 
-Overfull \hbox (1.05833pt too wide) in paragraph at lines 1111--1114
+Overfull \hbox (1.05833pt too wide) in paragraph at lines 1024--1027
 \OT1/cmr/m/n/12 fish-eries. In \OT1/cmr/m/it/12 Ex-ploita-tion of ma-rine com-m
 u-ni-ties \OT1/cmr/m/n/12 (pp. 155--190). Springer. 
  []
 
-[40]
+[38]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ´ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no © in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no © in font cmr12!
- [41]
-Overfull \hbox (12.44746pt too wide) in paragraph at lines 1190--1193
+ [39]
+Overfull \hbox (12.44746pt too wide) in paragraph at lines 1103--1106
 \OT1/cmr/m/n/12 TMB: Au-to-matic dif-fer-en-ti-a-tion and laplace ap-prox-i-ma-
 tion. \OT1/cmr/m/it/12 ArXiv Preprint
  []
 
-[42] [43] [44] [45]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1320.
- [46]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1320.
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¤ in font cmr12!
+[40] [41] [42]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1232.
+ [43]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1232.
  (./prop.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1320.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1320.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1232.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1232.
 
 Package rerunfilecheck Info: File `prop.out' has not changed.
 (rerunfilecheck)             Checksum: E0BD60EB0E49E8FD60B6AF711BF3967D;4975.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1320.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1232.
  ) 
 Here is how much of TeX's memory you used:
- 11971 strings out of 493089
- 172325 string characters out of 6134842
+ 11967 strings out of 493089
+ 172284 string characters out of 6134842
  307685 words of memory out of 5000000
  15219 multiletter control sequences out of 15000+600000
  13975 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,46p,820b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,8n,46p,820b,428s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
@@ -623,10 +631,10 @@ texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/tex
 live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
 live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on prop.pdf (46 pages, 230553 bytes).
+Output written on prop.pdf (43 pages, 225800 bytes).
 PDF statistics:
- 478 PDF objects out of 1000 (max. 8388607)
- 413 compressed objects within 5 object streams
- 137 named destinations out of 1000 (max. 500000)
+ 465 PDF objects out of 1000 (max. 8388607)
+ 403 compressed objects within 5 object streams
+ 133 named destinations out of 1000 (max. 500000)
  193 words of extra memory for PDF output out of 10000 (max. 10000000)
 
