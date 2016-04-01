@@ -184,6 +184,14 @@ $\delta_{s,t}$ & Observation error for species $s$ at time $t$ $\left(\epsilon_{
 
 \newpage
 
+\begin{figure}[htbp]
+\centering
+\includegraphics{figures/Ft.pdf}
+\caption{Three instantaneous fishing mortality $F_t$ trends over 40 years of management history. The black line shows a steady linear increase over the time period to a maximum of $F_t = 1$. The red line shows a fishery that developed over 20 years and then held fishing mortality steady at $F_t = 1$ for the following 20. Both trajectories correspond to developmental periods of a fishery, which provides little information about a stocks response to alleviating fishing pressure. Finally, the blue line shows a more informative trajectory, with periods of increasing and decreasing fishing pressure over the 40 year management period. Here, stock dynamics will respond to the changes in fishing pressure and provide more information about productivity than the other two cases.}\label{fig:HBMCh1}
+\end{figure}
+
+\newpage
+
 \begin{table}[htbp]
 \begin{center}
 \caption{Variable definitions for a simulation of multispecies fishery used in Chapter 2, where each species has multiple stocks. The population dynamics are driven by a simple Biomass Dynamics model (Hilborn and Walters, 1992, Ch, 8), with immigration and emigration between stocks of a species summarised by a migration rate $\phi_{s,i,j}$. Catch is driven by fishing mortality for individual stocks, which is an input to the model.}\label{tab:OMspec}

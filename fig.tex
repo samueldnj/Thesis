@@ -1,5 +1,5 @@
 \documentclass[]{scrartcl}
-\usepackage[letterpaper]{geometry}
+\usepackage[letterpaper, margin = 1in, footskip = 0.25in]{geometry}
 \usepackage{amsmath,amssymb,setspace}
 \usepackage{graphicx}
 \usepackage{xcolor}
@@ -235,6 +235,14 @@ $\delta_{s,t}$ & Observation error for species $s$ at time $t$ $\left(\epsilon_{
 \centering
 \includegraphics{figures/HBMClarkCh1.pdf}
 \caption{A conceptual diagram of the hierarchical model used for estimation in Chapter 1.  Part (a) shows the individual species process and observation models, with species specific parameters and hyperparameters. Part (b) compresses the time series into bold italicised variables, and shows the hierarchically arranged multispecies assemblage with shared multispecies parameters and hyperparameters.}\label{fig:HBMCh1}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{figures/Ft.pdf}
+\caption{Three instantaneous fishing mortality $F_t$ trends over 40 years of management history. The black line shows a steady linear increase over the time period to a maximum of $F_t = 1$. The red line shows a fishery that developed over 20 years and then held fishing mortality steady at $F_t = 1$ for the following 20. Both trajectories correspond to developmental periods of a fishery, which provides little information about a stocks response to alleviating fishing pressure. Finally, the blue line shows a more informative trajectory, with periods of increasing and decreasing fishing pressure over the 40 year management period. Here, stock dynamics will respond to the changes in fishing pressure and provide more information about productivity than the other two cases.}\label{fig:HBMCh1}
 \end{figure}
 
 \newpage

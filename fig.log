@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  23 MAR 2016 08:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  28 MAR 2016 10:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -356,7 +356,23 @@ Package hyperref Warning: Option `bookmarks' has already been used,
 (hyperref)                setting the option has no effect on input line 47.
 
 Package hyperref Info: Option `colorlinks' set `true' on input line 47.
-No file fig.aux.
+(./fig.aux
+
+LaTeX Warning: Label `fig:ppHCR' multiply defined.
+
+
+LaTeX Warning: Label `tab:OMspec' multiply defined.
+
+
+LaTeX Warning: Label `tab:Ch2est' multiply defined.
+
+
+LaTeX Warning: Label `tab:OMspec' multiply defined.
+
+
+LaTeX Warning: Label `fig:MSMSE' multiply defined.
+
+)
 \openout1 = `fig.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
@@ -375,6 +391,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
 LaTeX Font Info:    ... okay on input line 55.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 55.
 LaTeX Font Info:    ... okay on input line 55.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -383,19 +400,19 @@ LaTeX Font Info:    ... okay on input line 55.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(92.14519pt, 430.00462pt, 92.14519pt)
-* v-part:(T,H,B)=(95.39737pt, 556.47656pt, 143.09605pt)
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=430.00462pt
-* \textheight=556.47656pt
-* \oddsidemargin=19.8752pt
-* \evensidemargin=19.8752pt
-* \topmargin=-14.27263pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.40001pt
 * \headheight=17.0pt
 * \headsep=20.40001pt
 * \topskip=11.0pt
-* \footskip=47.6pt
+* \footskip=18.06749pt
 * \marginparwidth=59.7508pt
 * \marginparsep=12.8401pt
 * \columnsep=10.0pt
@@ -451,31 +468,33 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 55.
 LaTeX Info: Redefining \pageref on input line 55.
 LaTeX Info: Redefining \nameref on input line 55.
+
+(./fig.out) (./fig.out)
 \@outlinefile=\write3
 \openout3 = `fig.out'.
 
-
-<figures/mscMSE.pdf, id=4, 803.0pt x 301.125pt>
+ <figures/mscMSE.pdf, id=8, 803.0pt x 301.125pt>
 File: figures/mscMSE.pdf Graphic file (type pdf)
- <use figures/mscMSE.pdf>
-Package pdftex.def Info: figures/mscMSE.pdf used on input line 67.
-(pdftex.def)             Requested size: 430.00462pt x 161.2542pt.
 
-[1
+<use figures/mscMSE.pdf>
+Package pdftex.def Info: figures/mscMSE.pdf used on input line 67.
+(pdftex.def)             Requested size: 469.75502pt x 176.16429pt.
+ [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./figur
-es/mscMSE.pdf>] <figures/WeakStrongDist.pdf, id=30, 505.89pt x 505.89pt>
+es/mscMSE.pdf>]
+<figures/WeakStrongDist.pdf, id=33, 505.89pt x 505.89pt>
 File: figures/WeakStrongDist.pdf Graphic file (type pdf)
 
 <use figures/WeakStrongDist.pdf>
 Package pdftex.def Info: figures/WeakStrongDist.pdf used on input line 75.
-(pdftex.def)             Requested size: 430.00462pt x 430.01624pt.
+(pdftex.def)             Requested size: 469.75502pt x 469.76265pt.
 
-<figures/ppHCR.pdf, id=31, 614.295pt x 401.5pt>
+<figures/ppHCR.pdf, id=34, 614.295pt x 401.5pt>
 File: figures/ppHCR.pdf Graphic file (type pdf)
  <use figures/ppHCR.pdf>
 Package pdftex.def Info: figures/ppHCR.pdf used on input line 83.
-(pdftex.def)             Requested size: 430.00462pt x 281.0542pt.
+(pdftex.def)             Requested size: 469.75502pt x 307.03009pt.
 LaTeX Font Info:    Try loading font information for U+msa on input line 84.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -486,158 +505,106 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 84.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<figures/bocaccio.pdf, id=32, 535.64827pt x 392.41626pt>
+<figures/bocaccio.pdf, id=35, 535.64827pt x 392.41626pt>
 File: figures/bocaccio.pdf Graphic file (type pdf)
 
 <use figures/bocaccio.pdf>
 Package pdftex.def Info: figures/bocaccio.pdf used on input line 91.
-(pdftex.def)             Requested size: 430.00462pt x 315.02919pt.
+(pdftex.def)             Requested size: 469.75502pt x 344.15376pt.
 
-<figures/lingcod.pdf, id=33, 535.64827pt x 392.41626pt>
+<figures/lingcod.pdf, id=36, 535.64827pt x 392.41626pt>
 File: figures/lingcod.pdf Graphic file (type pdf)
 
 <use figures/lingcod.pdf>
 Package pdftex.def Info: figures/lingcod.pdf used on input line 99.
-(pdftex.def)             Requested size: 430.00462pt x 315.02919pt.
- <figures/msFishery.pdf, id=34, 2007.5pt x 702.625pt>
+(pdftex.def)             Requested size: 469.75502pt x 344.15376pt.
+ <figures/msFishery.pdf, id=37, 2007.5pt x 702.625pt>
 File: figures/msFishery.pdf Graphic file (type pdf)
 
 <use figures/msFishery.pdf>
 Package pdftex.def Info: figures/msFishery.pdf used on input line 107.
-(pdftex.def)             Requested size: 430.00462pt x 150.4932pt.
-
-
-LaTeX Warning: Reference `tab:OMspec' on page 2 undefined on input line 161.
-
-
-LaTeX Warning: Reference `tab:OMspec' on page 2 undefined on input line 161.
-
-
-LaTeX Warning: Reference `tab:OMspec' on page 2 undefined on input line 188.
-
-
-LaTeX Warning: Reference `tab:OMspec' on page 2 undefined on input line 188.
-
-
-Overfull \hbox (134.75pt too wide) in paragraph at lines 190--229
+(pdftex.def)             Requested size: 469.75502pt x 164.40929pt.
+ [2] [3 <./figures/WeakStrongDist.pdf>] [4 <./figures/ppHCR.pdf>] [5 <./figures
+/bocaccio.pdf>] [6 <./figures/lingcod.pdf> <./figures/msFishery.pdf>] [7]
+Overfull \hbox (94.9996pt too wide) in paragraph at lines 190--229
  [] 
  []
 
-<figures/HBMClarkCh1.pdf, id=35, 853.1875pt x 1003.75pt>
+[8] <figures/HBMClarkCh1.pdf, id=369, 853.1875pt x 1003.75pt>
 File: figures/HBMClarkCh1.pdf Graphic file (type pdf)
 
 <use figures/HBMClarkCh1.pdf>
 Package pdftex.def Info: figures/HBMClarkCh1.pdf used on input line 236.
-(pdftex.def)             Requested size: 430.00462pt x 505.90187pt.
+(pdftex.def)             Requested size: 469.75502pt x 552.66153pt.
+ <figures/Ft.pdf, id=370, 505.89pt x 505.89pt>
+File: figures/Ft.pdf Graphic file (type pdf)
 
+<use figures/Ft.pdf>
+Package pdftex.def Info: figures/Ft.pdf used on input line 244.
+(pdftex.def)             Requested size: 469.75502pt x 469.76265pt.
 
-LaTeX Warning: Float too large for page by 31.50537pt on input line 238.
-
-
-Overfull \hbox (2.31871pt too wide) in paragraph at lines 245--287
+Overfull \hbox (15.05525pt too wide) in paragraph at lines 303--324
  [] 
  []
 
 
-LaTeX Warning: Reference `tab:OMspec' on page 2 undefined on input line 294.
-
-
-LaTeX Warning: Reference `tab:OMspec' on page 2 undefined on input line 294.
-
-
-Overfull \hbox (54.80565pt too wide) in paragraph at lines 295--316
+Overfull \hbox (36.36018pt too wide) in paragraph at lines 333--371
  [] 
  []
 
-
-LaTeX Warning: Reference `tab:OMspec' on page 2 undefined on input line 324.
-
-
-LaTeX Warning: Reference `tab:OMspec' on page 2 undefined on input line 324.
-
-
-Overfull \hbox (76.11058pt too wide) in paragraph at lines 325--363
- [] 
- []
-
-<figures/HBMClarkCh2.pdf, id=36, 853.1875pt x 1505.625pt>
+<figures/HBMClarkCh2.pdf, id=375, 853.1875pt x 1505.625pt>
 File: figures/HBMClarkCh2.pdf Graphic file (type pdf)
 
 <use figures/HBMClarkCh2.pdf>
-Package pdftex.def Info: figures/HBMClarkCh2.pdf used on input line 370.
+Package pdftex.def Info: figures/HBMClarkCh2.pdf used on input line 378.
 (pdftex.def)             Requested size: 341.26895pt x 602.23933pt.
 
 
-LaTeX Warning: Float too large for page by 127.84283pt on input line 372.
+LaTeX Warning: Float too large for page by 33.88939pt on input line 380.
 
-
-Overfull \hbox (2.31871pt too wide) in paragraph at lines 379--423
- [] 
- []
-
-<figures/MSE.pdf, id=37, 614.295pt x 702.625pt>
+<figures/MSE.pdf, id=376, 614.295pt x 702.625pt>
 File: figures/MSE.pdf Graphic file (type pdf)
  <use figures/MSE.pdf>
-Package pdftex.def Info: figures/MSE.pdf used on input line 430.
-(pdftex.def)             Requested size: 430.00462pt x 491.84486pt.
+Package pdftex.def Info: figures/MSE.pdf used on input line 438.
+(pdftex.def)             Requested size: 469.75502pt x 537.30267pt.
 
-
-LaTeX Warning: Float too large for page by 44.64838pt on input line 432.
-
-<figures/stableRiskRegions.pdf, id=38, 1204.5pt x 614.295pt>
+<figures/stableRiskRegions.pdf, id=377, 1204.5pt x 614.295pt>
 File: figures/stableRiskRegions.pdf Graphic file (type pdf)
 
 <use figures/stableRiskRegions.pdf>
-Package pdftex.def Info: figures/stableRiskRegions.pdf used on input line 436.
-(pdftex.def)             Requested size: 430.00462pt x 219.29947pt.
+Package pdftex.def Info: figures/stableRiskRegions.pdf used on input line 444.
+(pdftex.def)             Requested size: 469.75502pt x 239.57408pt.
 
-
-LaTeX Warning: Reference `fig:3Models' on page 2 undefined on input line 437.
-
-
-LaTeX Warning: Reference `fig:3Models' on page 2 undefined on input line 437.
-
-<figures/gantt.pdf, id=39, 614.295pt x 250.9375pt>
+<figures/gantt.pdf, id=380, 614.295pt x 250.9375pt>
 File: figures/gantt.pdf Graphic file (type pdf)
  <use figures/gantt.pdf>
-Package pdftex.def Info: figures/gantt.pdf used on input line 444.
-(pdftex.def)             Requested size: 430.00462pt x 175.65887pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 448.
+Package pdftex.def Info: figures/gantt.pdf used on input line 452.
+(pdftex.def)             Requested size: 469.75502pt x 191.8938pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 456.
 
-[2 <./figures/WeakStrongDist.pdf>] [3 <./figures/ppHCR.pdf>] [4 <./figures/boca
-ccio.pdf>] [5 <./figures/lingcod.pdf>] [6 <./figures/msFishery.pdf>] [7]
-[8] [9] [10 <./figures/HBMClarkCh1.pdf>] [11] [12] [13] [14 <./figures/HBMClark
-Ch2.pdf>] [15] [16 <./figures/MSE.pdf>] [17 <./figures/stableRiskRegions.pdf> <
-./figures/gantt.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 448.
+[9 <./figures/HBMClarkCh1.pdf>] [10 <./figures/Ft.pdf>] [11] [12] [13] [14 <./f
+igures/HBMClarkCh2.pdf>] [15] [16 <./figures/MSE.pdf>] [17 <./figures/stableRis
+kRegions.pdf> <./figures/gantt.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 456.
  (./fig.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 448.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 448.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 456.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 456.
+Package rerunfilecheck Info: File `fig.out' has not changed.
+(rerunfilecheck)             Checksum: 4F72A5C98656660027392C90AA081851;140.
 
 
-Package rerunfilecheck Warning: File `fig.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: Checksums for `fig.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  4F72A5C98656660027392C90AA081851;140.
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 448.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 456.
  ) 
 Here is how much of TeX's memory you used:
- 11801 strings out of 493089
- 169567 string characters out of 6134842
- 358432 words of memory out of 5000000
- 15157 multiletter control sequences out of 15000+600000
+ 11817 strings out of 493089
+ 169748 string characters out of 6134842
+ 335788 words of memory out of 5000000
+ 15165 multiletter control sequences out of 15000+600000
  9835 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,14n,46p,717b,332s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,14n,46p,889b,334s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.p
@@ -652,10 +619,10 @@ al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on fig.pdf (17 pages, 817718 bytes).
+Output written on fig.pdf (17 pages, 903981 bytes).
 PDF statistics:
- 564 PDF objects out of 1000 (max. 8388607)
- 432 compressed objects within 5 object streams
- 37 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 645 PDF objects out of 1000 (max. 8388607)
+ 492 compressed objects within 5 object streams
+ 38 named destinations out of 1000 (max. 500000)
+ 69 words of extra memory for PDF output out of 10000 (max. 10000000)
 

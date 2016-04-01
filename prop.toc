@@ -1,24 +1,24 @@
 \contentsline {section}{\nonumberline Introduction}{3}{section*.2}
 \contentsline {subsection}{\nonumberline Background}{3}{section*.3}
-\contentsline {subsection}{\nonumberline Technical Interactions in Multispecies Fisheries}{5}{section*.4}
-\contentsline {subsection}{\nonumberline Assess and Avoid}{9}{section*.5}
-\contentsline {subsection}{\nonumberline Study System}{13}{section*.6}
-\contentsline {section}{\nonumberline Chapter 1: Estimating Coastwide Abundance and Productivity in a Multispecies Groundfish Fishery via a Hierarchical Stock Assessment Model}{15}{section*.7}
-\contentsline {subsection}{\nonumberline Background}{15}{section*.8}
-\contentsline {subsection}{\nonumberline Methods}{17}{section*.9}
-\contentsline {subsection}{\nonumberline Expected Results}{20}{section*.10}
-\contentsline {section}{\nonumberline Chapter 2: Adding Multistock Structure to Multispecies Hierarchical Stock Assessment Models}{21}{section*.11}
-\contentsline {subsection}{\nonumberline Background}{21}{section*.12}
-\contentsline {subsection}{\nonumberline Methods}{23}{section*.13}
-\contentsline {subsection}{\nonumberline Expected Results}{24}{section*.14}
-\contentsline {section}{\nonumberline Chapter 3: Performance of a Management Procedure Using an Hierarchical Stock Assessment Model for a Multispecies Groundfish Fishery}{25}{section*.15}
-\contentsline {subsection}{\nonumberline Background}{25}{section*.16}
-\contentsline {subsection}{\nonumberline Methods}{27}{section*.17}
-\contentsline {subsection}{\nonumberline Expected Results}{28}{section*.18}
-\contentsline {section}{\nonumberline Chapter 4: Avoiding non-target species.}{29}{section*.19}
-\contentsline {subsection}{\nonumberline Introduction}{29}{section*.20}
-\contentsline {subsection}{\nonumberline Methods}{31}{section*.21}
-\contentsline {subsection}{\nonumberline Expected Results}{32}{section*.22}
-\contentsline {section}{\nonumberline Conclusions}{33}{section*.23}
-\contentsline {subsection}{\nonumberline Resource allocation improvement (taken from intro)}{34}{section*.24}
-\contentsline {section}{\nonumberline Biblography}{35}{section*.25}
+\contentsline {subsection}{\nonumberline Assessments Acknowledging Technical Interactions}{4}{section*.4}
+\contentsline {subsection}{\nonumberline Assess and Avoid}{7}{section*.5}
+\contentsline {subsection}{\nonumberline Study System}{10}{section*.6}
+\contentsline {section}{\nonumberline Chapter 1: Estimating Coastwide Abundance and Productivity in a Multispecies Groundfish Fishery via a Hierarchical Stock Assessment Model}{11}{section*.7}
+\contentsline {subsection}{\nonumberline Background}{11}{section*.8}
+\contentsline {subsection}{\nonumberline Methods}{13}{section*.9}
+\contentsline {subsection}{\nonumberline Expected Results}{14}{section*.10}
+\contentsline {section}{\nonumberline Chapter 2: Adding Multistock Structure to Multispecies Hierarchical Stock Assessment Models}{15}{section*.11}
+\contentsline {subsection}{\nonumberline Background}{15}{section*.12}
+\contentsline {subsection}{\nonumberline Methods}{17}{section*.13}
+\contentsline {subsection}{\nonumberline Expected Results}{18}{section*.14}
+\contentsline {section}{\nonumberline Chapter 3: Management Performance of Hierarchical Multispecies Assessment Models}{18}{section*.15}
+\contentsline {subsection}{\nonumberline Background}{18}{section*.16}
+\contentsline {subsection}{\nonumberline Methods}{20}{section*.17}
+\contentsline {subsection}{\nonumberline Expected Results}{21}{section*.18}
+\contentsline {section}{\nonumberline Chapter 4: Avoiding non-target species.}{21}{section*.19}
+\contentsline {subsection}{\nonumberline Introduction}{21}{section*.20}
+\contentsline {subsection}{\nonumberline Methods}{23}{section*.21}
+\contentsline {subsection}{\nonumberline Expected Results}{24}{section*.22}
+\contentsline {section}{\nonumberline Conclusions}{25}{section*.23}
+\contentsline {subsection}{\nonumberline Resource allocation improvement (taken from intro)}{25}{section*.24}
+\contentsline {section}{\nonumberline Biblography}{26}{section*.25}
