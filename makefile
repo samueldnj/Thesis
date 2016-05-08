@@ -2,15 +2,17 @@ export PATH := /Library/TeX/texbin:$(PATH)    # add LaTeX path
 export PATH := /usr/local/bin:$(PATH) 				# add Rscript path
 
 # Cluster targets
+all: pdf doc
 pdf:  prop.pdf fig.pdf
 doc:  prop.docx fig.pdf
 
 # Variables for pandoc calls
 PANDOC = pandoc
 LATEX = pdflatex
-BIB  = --bibliography ~/Dropbox/Library/library.bib
+BIB  = --filter pandoc-citeproc --bibliography ~/Work/Library/library.bib
 CSL  = --csl ~/Work/write/templates/csl/apa.csl 
 PTMP = --template ~/Work/write/templates/tex/basic.latex
+BIBPRE = --filter pandoc-citeproc-preamble -M citeproc-preamble=/Users/sdnjohnson/Work/write/templates/tex/citeproc-preamble.latex
 # ABV  = --citation-abbreviations ./pandoc/abbrev.json
 # STMP = --template ./pandoc/sup.latex
 # FTMP = --template ./pandoc/fig.latex
@@ -24,11 +26,11 @@ prop.pdf: prop.tex makefile
 
 ## tex
 prop.tex: prop.md makefile
-	$(PANDOC) -s $(PTMP) $(BIB) $(CSL) -o $@ $<
+	$(PANDOC) -s $(PTMP) $(BIB) $(BIBPRE) $(CSL) -o $@ $<
 
 ## docx
-prop.docx: prop.md makefile
-	$(PANDOC) -s -S $(WTMP) $(BIB) $(CSL) -o $@ $<
+prop.docx: prop.tex makefile
+	$(PANDOC) -s -S $(WTMP) -o $@ $<
 
 ## fig
 fig.pdf: fig.tex makefile

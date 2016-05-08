@@ -1,8 +1,10 @@
 \documentclass[]{scrartcl}
 \usepackage[letterpaper, margin = 1in, footskip = 0.25in]{geometry}
-\usepackage{amsmath,amssymb,setspace}
+\usepackage{amsmath,amssymb,setspace,mathabx}
 \usepackage{graphicx}
 \usepackage{xcolor}
+\usepackage{lscape}
+\usepackage{verbatim}
 \doublespacing
 
 \providecommand{\tightlist}{%
@@ -62,11 +64,13 @@
 
 \section{Figures and Tables}\label{figures-and-tables}
 
+\begin{landscape}
 \begin{figure}[htbp]
 \centering
 \includegraphics{figures/mscMSE.pdf}
 \caption{A simplified fishery managment system divided into 5 discrete units. (1) Applied Population Ecology, (2) Fisheries Data Science, (3) Stock Assessment Modeling, (4) Risk Assessment, (5) Management Strategy Evaluation.}\label{fig:fishMgmt}
 \end{figure}
+\end{landscape}
 
 \newpage
 
@@ -95,25 +99,29 @@
 \newpage
 
 \begin{figure}[htbp]
-\centering
+\begin{center}
 \includegraphics{figures/lingcod.pdf}
 \caption{Quota utilisation of lingcod in the BC integrated groundfish fishery. The black line represents the average annual total allowable catch (taken from the Pacific Region Integrated Fishery Management Plan) and the coloured polygons represent the biomass of removals in each management area.}\label{fig:lingcod}
+\end{center}
 \end{figure}
 
 \newpage
 
+\begin{landscape}
 \begin{figure}[htbp]
-\centering
+\begin{center}
 \includegraphics{figures/msFishery.pdf}
 \caption{Three models of fishery management: (a) status quo,
 single species approach; (b) hierarchical multi-species model; (c) total aggregation of species}\label{fig:3Models}
+\end{center}
 \end{figure}
+\end{landscape}
 
 \newpage
 
 \begin{table}[htbp]
 \begin{center}
-\caption{Variable definitions for a simulation of a multispecies fishery with no substock structure, used in Chapter 1. The population dynamics are driven by a simple Biomass Dynamics model (Hilborn and Walters, 1992, Ch, 8). Species catch is dependent on fishing mortality for each species, which is an input to the model. The current specification can be considered to be "coastwide" in the sense that it aggregates all discrete management units of each species into a single unit.}\label{tab:OMspec}
+\caption{Variable definitions for simulation and estimation of a multispecies fishery with no substock structure used in Chapter 1. The population dynamics are driven by a simple Biomass Dynamics model (Hilborn and Walters, 1992, Ch, 8). Catch is dependent on fishing mortality for each species, which is an input to the model. The current specification can be considered to be "coastwide" in the sense that it aggregates all discrete stocks of each species into a single management unit.}\label{tab:Ch1spec}
 \begin{tabular}{c|l}
 \textit{Variable} & \textit{Description}  \\
 \hline
@@ -134,21 +142,24 @@ $r_{s}$ & Average intrinsic rate of growth for speces $s$ \\
 \hline
 & \textbf{ Observation Model} \\
 \hline
-$q_{s}$ & Survey catchability of species $s$ at time $t$ \\
+$q_{s}$ & Survey catchability of species $s$ \\
 $I_{s,t}$ & Fishery independent CPUE of species $s$ at time $t$ \\
 \hline
 & \textbf{ Output (catch) } \\
 \hline
 $F_{s,t}$ & Fishing mortality of species $s$ at time $t$ \\
-$C_{s,t}$ & Total catch of species $s$ at time $t$ \\
+$C_{s,t}$ & Catch of species $s$ at time $t$ \\
 \hline
 & \textbf{ Stochastic Model} \\
-$\sigma_s^2$ & Process error variance for species $s$ \\
-$\epsilon_{s,t}$ & Process error for species $s$ at time $t$, $\left( \epsilon_{s,t} \sim N (0, \sigma_s^2) \right)$ \\
-$\sigma^2$ & Assemblage level process error variance \\
-$\epsilon_{t}$ & Assemblage level process error at time $t$, $\left( \epsilon_{t} \sim N (0, \sigma^2) \right)$ \\
+\hline
+$\Sigma$ & Species specific process error covariance matrix  \\
+$\zeta_t = \left(\zeta_{s,t}\right)_{s=1}^S$ & Vector of species specific process errors $\left(\zeta_t \sim N ( \vec{0}, \Sigma)\right)$  \\
+$\sigma^2$ & Coastwide environmental process error variance \\
+$\epsilon_{t}$ & Coastwide environmental process error at time $t$, $\left( \epsilon_{t} \sim N (0, \sigma^2) \right)$ \\
 $\tau_s^2$ & Observation error variance for species $s$ \\
 $\delta_{s,t}$ & Observation error for species $s$ at time $t$ $\left(\epsilon_{s,t} \sim N (0, \tau_s^2) \right)$ \\
+$\overline{\log q}$ & Shared multispecies prior mean on $\log$ catchability \\
+$\kappa^2$ & Multispecies prior variance on $\log$ catchability \\
 \hline
 \end{tabular}
 \end{center}
@@ -158,22 +169,22 @@ $\delta_{s,t}$ & Observation error for species $s$ at time $t$ $\left(\epsilon_{
 
 \begin{table}[htbp]
 \begin{center}
-\caption{The simulation model to produce data for the estimation procedure in Chapter 1. The simulator generates time series of catch, biomass and CPUE for species $s$ with input parameters $\Theta_s$. All variables are defined in Table \ref{tab:OMspec}.}\label{tab:Ch1sim}
+\caption{The simulation model to produce data for the estimation procedure in Chapter 1. The simulator generates time series of catch, biomass and CPUE for species $s$ with input parameters $\Theta_s$. All variables are defined in Table \ref{tab:Ch1spec}. The notation $\Sigma_{(s)}$ refers to the entry on the main diagonal corresponding to species $s$.}\label{tab:Ch1sim}
 \begin{tabular}{cl}
 \hline
 & \textbf{Simulation Parameters} \\
 (T2.1) & $\Theta_s = \left( B_{s,0}, r_s, q_s, 
                           \{F_{s,t}\}_{t = 1}^{T},
-                          \sigma_s^2, \tau_s^2 \right)$ \\
+                          \Sigma, \sigma_s^2, \tau_s^2 \right)$ \\
 & \\
 & \textbf{ Initial States ($t = 1$) } \\
-(T2.2) & $B_{s,1} = B_{s,0} \cdot e^{\epsilon_{s,t} - \sigma_s^2/2}$ \\
+(T2.2) & $B_{s,1} = B_{s,0} \cdot e^{(\zeta_{s,1} - \Sigma_{(s)}/2) + (\epsilon_1 - \sigma^2/2)}$ \\
 & \\
 & \textbf{ Catch ($1 \leq t \leq T$) } \\
 (T2.3) & $C_{s,t} = \left(1 - e^{F_{s,t}}\right)\cdot B_{s,t}$ \\
 & \\
 & \textbf{ State Dynamics ($2 \leq t \leq T$)} \\
-(T2.4) & $B_{s,t} = \left ( B_{s,t-1} + r_sB_{s,t-1}\left( 1 - \frac{B_{s,t-1}}{B_{s,0}} \right) - C_{s,{t-1} } \right) \cdot e^{\epsilon_{s,t} - \sigma_s^2/2}$ \\
+(T2.4) & $B_{s,t} = \left ( B_{s,t-1} + r_sB_{s,t-1}\left( 1 - \frac{B_{s,t-1}}{B_{s,0}} \right) - C_{s,{t-1} } \right) \cdot e^{(\zeta_{s,t} - \Sigma_{(s)}/2) + (\epsilon_t - \sigma^2/2)}$ \\
 & \\
 & \textbf{ Observations ($1 \leq t \leq T$)} \\
 (T2.5) & $I_{s,t} = q_s \cdot B_{s,t} \cdot e^{\delta_{s,t} - \tau_s^2/2}$ \\
@@ -185,45 +196,37 @@ $\delta_{s,t}$ & Observation error for species $s$ at time $t$ $\left(\epsilon_{
 \newpage
 
 \begin{table}[htbp]
-\caption{A truncated version of the hierarchical stock assessment model used as the estimation procedure Chapter 1. The hierarchical model in this version shares a prior distribution on process error deviations $\epsilon_{s,t}$, representing correlations in environmental variation due to species with shared habitat. All variables used here are defined in Table \ref{tab:OMspec} except $\sigma^2$, which is the assemblage level variance for the shared prior on process error terms.}\label{tab:Ch2est}
+\caption{Selected elements of the hierarchical stock assessment model used as the estimation procedure Chapter 1. The function $f_s(\Theta_s)$ in the species specific posterior density (T3.10) represents the species specific prior distributions that are omitted from the table. The notation $\Sigma^{(S)}_{(s)}$ refers to the entry on the main diagonal of $\Sigma^{(S)}$ corresponding to species $s$.}\label{tab:Ch2est}
 \begin{center}
 \begin{tabular}{cl}
 \hline
 & \textbf{Assessment Parameters} \\
 (T3.1) & $\Theta_s = \left\{ B_{s,0}, r_s, q_s, 
-                            \tau_s^2, m_{B,s}, v_{B,s}^2,
+                            \tau_s^2, \Sigma,
                             \left\{ I_{s,t} \right\}_{t = 1}^T,
                             \left\{ C_{s,t} \right\}_{t = 1}^T \right\}$ \\
-(T3.2) & $\Theta = \left\{ \left\{\Theta_s) \right\}_{s = 1}^S, \sigma^2, m_q, v_q^2 \right\}$ \\
+(T3.2) & $\Theta = \left\{ \left\{\Theta_s) \right\}_{s = 1}^S, \sigma^2, \log q, \kappa^2 \right\}$ \\
 & \\
 & \textbf{ Population Dynamics Model } \\
-(T3.3) & $B_{s,1} = B_{s,0} \cdot e^{\epsilon_t - \sigma^2/2}$ \\
-(T3.4) & $B_{s,t} = \left ( B_{s,t-1} + r_sB_{s,t-1}\left( 1 - \frac{B_{s,t-1}}{B_{s,0}} \right) - C_{s,{t-1} } \right) \cdot e^{\epsilon_{t} - \sigma^2/2}$, $2 \leq t \leq T$, \\
+(T3.3) & $B_{s,1} = B_{s,0} \cdot e^{(\zeta_{s,1} - \Sigma_{(s)}^2/2) + (\epsilon_1 - \sigma^2/2)}$ \\
+(T3.4) & $B_{s,t} = \left ( B_{s,t-1} + r_sB_{s,t-1}\left( 1 - \frac{B_{s,t-1}}{B_{s,0}} \right) - C_{s,{t-1} } \right) \cdot e^{(\zeta_{s,t} - \Sigma_{(s)}^2/2) + (\epsilon_{t} - \sigma^2/2)}$,~~~ $2 \leq t \leq T$, \\
 & \\
 & \textbf{ Observational Model ($1 \leq t \leq T$)} \\
-(T3.5) & $\bar{I}_{s,t} = q_s \cdot B_{s,t} \cdot e^{\delta_{s,t} - \tau_s^2/2}$ \\
+(T3.5) & $\overline{I_{s,t}} = q_s \cdot B_{s,t} \cdot e^{\delta_{s,t} - \tau_s^2/2}$ \\
 & \\
 & \textbf{ Statistical Model } \\
 & \textit{ Data Likelihood } \\
 (T3.6) &  $\mathcal{L}_s \left( \left\{ I_{s,t} \right\}_{t = 1}^T ~|~
-                                \Theta_s \right) =
-                         \left(\frac{1}{\sqrt{2\pi \tau_s^2}}\right)^T \cdot
-                         \prod_{t = 1}^T e^{ - \frac{\left(\bar{I}_{s,t}/I_{s,t} \right)^2 }{2\tau_s^2} }$ \\
-& \textit{ Shared Assemblage Priors } \\
-(T3.7) &  $p ( \epsilon_{s,t} ~|~ \sigma^2 ) = 
-                        \left(\frac{1}{\sqrt{2\pi \sigma^2}}\right)^ST \cdot
-                         \prod_{s = 1}^S\prod_{t = 1}^T e^ { - \frac{\epsilon_{s,t}^2 }{2\sigma^2} }$\\
-(T3.8) & $p ( \log q_s ~|~ m_q, v_q^2 ) = \frac{1}{\sqrt{2\pi v_q^2}} \cdot e^{- \frac{(\log q - m_q)^2}{2v_q^2}}$ \\
-& \textit{ Species Priors } \\
-(T3.9) & $p ( \log B_{0,s} ~|~ m_{B,s}, v_{B,s}^2 ) = \frac{1}{\sqrt{2\pi v_{B,s}^2}} \cdot e^{- \frac{(\log B_{0,s} - m_{B,s})^2}{2v_{B,s}^2}} $ \\
+                                \Theta_s \right) \sim \log N \left( \left\{ \overline{I_{s,t}} \right\}_{t = 1}^T, \tau_s^2 \right)$ \\
+& \textit{ Multispecies Prior Distributions } \\
+(T3.7) &  $p \left( \epsilon_{t} ~|~ \sigma^2 \right) = N \left( 0, \sigma^2\right)$\\
+(T3.8) &  $p \left( \zeta_{t} ~|~ \Sigma \right) = N \left( \vec{0}, \Sigma \right)$\\
+(T3.9) & $p \left( \log q_s ~|~ \overline{\log q}, \kappa^2 \right) \sim N \left( \overline{\log q}, \kappa^2 \right)$ \\
 & \textit{ Posterior Density } \\
-(T3.9) &  $\mathcal{P} \left( \Theta ~|~ 
-                              \left\{ I_{s,t} \right\}_{(s,t) = (1,1)}^{(S,T)}
-                       \right) = 
-                             \prod_{s = 1}^S \left[
-                                \mathcal{L}_s\left( \left\{ I_{s,t} \right\}_{t = 1}^T ~|~ \Theta_s \right) \cdot p ( \epsilon_{s,t} ~|~ \sigma^2 ) \cdot p ( \log q ~|~ m_q, v_q^2)
-                            \cdot  p ( \log B_{0,s} ~|~ m_{B,s}, v_{B,s}^2 ) 
-                            \right]  $ \\
+(T3.10) & $\mathcal{P}_s = \mathcal{L}_s \cdot p \left( \log q_s ~|~ \overline{\log q}, \kappa^2 \right) \cdot f_s(\Theta_s)$ \\
+(T3.11) & $\mathcal{P} = \prod_{s = 1}^S \mathcal{P}_s \cdot
+            \prod_{t = 1}^T \left( p \left( \epsilon_{t} ~|~ \sigma^2 \right) \cdot p \left( \zeta_{t} ~|~ \Sigma \right) \right ) 
+             $ \\
 \hline
 \end{tabular}
 \end{center}
@@ -242,54 +245,61 @@ $\delta_{s,t}$ & Observation error for species $s$ at time $t$ $\left(\epsilon_{
 \begin{figure}[htbp]
 \centering
 \includegraphics{figures/Ft.pdf}
-\caption{Three instantaneous fishing mortality $F_t$ trends over 40 years of management history. The black line shows a steady linear increase over the time period to a maximum of $F_t = 1$. The red line shows a fishery that developed over 20 years and then held fishing mortality steady at $F_t = 1$ for the following 20. Both trajectories correspond to developmental periods of a fishery, which provides little information about a stocks response to alleviating fishing pressure. Finally, the blue line shows a more informative trajectory, with periods of increasing and decreasing fishing pressure over the 40 year management period. Here, stock dynamics will respond to the changes in fishing pressure and provide more information about productivity than the other two cases.}\label{fig:HBMCh1}
+\caption{Three instantaneous fishing mortality $F_t$ trends over 40 years of management history. The black line shows a steady linear increase over the time period to a (fully selected) maximum of $F_t = 1$. The red line shows a fishery that developed over 20 years and then held fishing mortality steady at $F_t = 1$ for the following 20. Both trajectories correspond to developmental periods of a fishery, which provides little information about a stock's response to alleviating fishing pressure. Finally, the blue line shows a more informative sawtooth pattern, with periods of increasing and decreasing fishing pressure over the 40 year management period. Here, stock dynamics will respond to the changes in fishing pressure and provide more information about productivity than the other two cases.}\label{fig:HBMCh1}
 \end{figure}
 
 \newpage
 
 \begin{table}[htbp]
 \begin{center}
-\caption{Variable definitions for a simulation of multispecies fishery used in Chapter 2, where each species has multiple stocks. The population dynamics are driven by a simple Biomass Dynamics model (Hilborn and Walters, 1992, Ch, 8), with immigration and emigration between stocks of a species summarised by a migration rate $\phi_{s,i,j}$. Catch is driven by fishing mortality for individual stocks, which is an input to the model.}\label{tab:OMspec}
+\caption{Variable definitions for simulation and estimation of a multispecies spatially structured multistock fishery used in Chapter 2. The population dynamics are driven by a simple Biomass Dynamics model (Hilborn and Walters, 1992, Ch, 8), with immigration and emigration between stocks of a species summarised by a migration rate $\phi_{s,p,p'}$. Catch is determined by instantaneous fishing mortality for each individual stock, which is defined as an input to the model.}\label{tab:Ch2spec}
 \begin{tabular}{c|c}
 \textit{Variable} & \textit{Description}  \\
 \hline
 & \textbf{ Index Variables} \\
 \hline
 $s$ & Species index \\
-$j$ & Stock index \\
+$p$ & Stock index \\
 $f$ & Fleet index \\
 $t$ & Time index \\
 $S$ & Total number of species \\
-$J_s$ & Total number of stocks of species s \\
+$P_s$ & Total number of stocks of species s \\
 $F$ & Total number of fleets \\
 $T$ & Total number of years \\
 \hline
 & \textbf{ Biological Model} \\
 \hline
-$B_{s,j,t}$ & Biomass of stock $j$ of species $s$ at time $t$ \\
-$B_{s,j,0}$ & Unfished biomass of stock $j$ of species $s$ \\
-$r_{s,j}$ & Intrinsic rate of growth for stock $j$ of speces $s$ \\
-$\phi_{s,j,i}$ &  Net migration rate between stocks $j$ and $i$ of species $s$ \\
+$B_{s,p,t}$ & Biomass of stock $p$ of species $s$ at time $t$ \\
+$B_{s,p,0}$ & Unfished biomass of stock $p$ of species $s$ \\
+$r_{s,p}$ & Intrinsic rate of growth for stock $p$ of speces $s$ \\
+$\phi_{s,p,p'}$ &  Net migration rate between stocks $p$ and $p'$ of species $s$ \\
 \hline
 & \textbf{ Observation Model} \\
 \hline
-$q_{s,j}$ & Survey catchability of stock $j$ of species $s$ at time $t$ \\
-$I_{s,j,t}$ & Fishery independent CPUE of stock $j$ of species $s$ at time $t$ \\
+$q_{s,p}$ & Survey catchability of stock $p$ of species $s$ at time $t$ \\
+$I_{s,p,t}$ & Fishery independent CPUE of stock $p$ of species $s$ at time $t$ \\
 \hline
 & \textbf{ Catch} \\
 \hline
-$F_{s,j,t}$ & Fishing mortality of stock $j$ of species $s$ at time $t$ \\
-$C_{s,j,t}$ & Total catch of stock $j$ of species $S$ at time $t$ \\
+$F_{s,p,t}$ & Fishing mortality of stock $p$ of species $s$ at time $t$ \\
+$C_{s,p,t}$ & Total catch of stock $p$ of species $S$ at time $t$ \\
 \hline
 & \textbf{ Stochastic Model } \\
-$\sigma_{s,j}^2$ & Process error variance for stock $j$ of species $s$ \\
-$\epsilon_{s,j,t}$ & Process error deviation for stock $j$ of species $s$ at time $t$, $\left( \epsilon_{s,j,t} \sim N (0, \sigma_{s,j}^2) \right)$ \\
-$\sigma_{s}^2$ & Process error variance for species $s$ \\
-$\epsilon_{s,t}$ & Process error deviation for species $s$ at time $t$, $\left( \epsilon_{s,t} \sim N (0, \sigma_s^2) \right)$ \\
-$\sigma^2$ & Assemblage level process error variance  \\
-$\epsilon_{t}$ & Assemblage level process error deviations at time $t$, $\left( \epsilon_{t} \sim N (0, \sigma^2) \right)$ \\
-$\tau_s^2$ & Observation error variance for species $s$ \\
-$\delta_{s,j,t}$ & Observation error for stock $j$ of species $s$ at time $t$ $\left(\epsilon_{s,j,t} \sim N (0, \tau_s^2) \right)$ \\
+\hline
+$\Sigma^{(P)}$ & Stock specific process error covariance matrix \\
+$\xi_{t} = \left( \xi_{s,p,t} \right)_{(s,p) = (1,1)}^{(S,P)}$ & Vector of stock specific process errors at time $t$, $\left( \xi_t \sim N (\vec0, \Sigma^{(P)}) \right)$ \\
+$\Sigma^{(S)}$ & Species specific process error covariance matrix \\
+$\zeta_t = \left(\zeta_{s,t}\right)_{s=1}^S$ & Vector of species specific process errors $\left(\zeta_t \sim N ( \vec{0}, \Sigma)\right)$  \\
+$\sigma^2$ & Coastwide process error variance \\
+$\epsilon_{t}$ & Coastwide process error deviation at time $t$, $\left( \epsilon_{t} \sim N (0, \sigma^2) \right)$ \\
+$\tau_{s,p}^2$ & Observation error variance for stock $p$ of species $s$ \\
+$\delta_{s,p,t}$ & Observation error for stock $p$ of species $s$ at time $t$ $\left(\epsilon_{s,p,t} \sim N (0, \tau_s^2) \right)$ \\
+$\overline{\log q_s}$ & Species specific prior mean on stock specific $\log$ catchability \\
+$\kappa_s^2$ & Species specific prior variance for stock specific $\log$ catchability \\
+$\overline{\log q}$ & Multispecies prior mean on species specific mean $\log$ catchability \\
+$\kappa^2$ & Multispecies prior variance for species specific mean $\log$ catchability \\
+$\overline{\log r_s}$ & Species specific prior mean on stock specific $\log$ intrinsic growth $r$ \\
+$\rho_s^2$ & Species specific prior variance for stock specific $\log$ intrinsic growth $r$ \\
 \hline
 \end{tabular}
 \end{center}
@@ -299,26 +309,30 @@ $\delta_{s,j,t}$ & Observation error for stock $j$ of species $s$ at time $t$ $\
 
 \begin{table}[htbp]
 \begin{center}
-\caption{The simulation model to produce data for the estimation procedure in Chapter 2. The model generates time series of catch, biomass and CPUE for stock $j$ of species $s$ with input parameters $\Theta_s$. All variables are defined in Table \ref{tab:OMspec}.}\label{tab:Ch2sim}
+\caption{The simulation model to produce data for the estimation procedure in Chapter 2. The model generates time series of catch, biomass and CPUE for stock $j$ of species $s$ with input parameters $\Theta_s$. All variables are defined in Table \ref{tab:Ch2spec}. The notation $\Sigma^{(S)}_{(s)}$ refers to the entry on the main diagonal of $\Sigma^{(S)}$ corresponding to species $s$, with the analagous definition for $\Sigma^{(P)}_{(s,p)}$.}\label{tab:Ch2sim}
 \begin{tabular}{cl}
 \hline
 & \textbf{Parameters} \\
-(T5.1) & $\Theta_{s,j} = \left( B_{s,j,0}, r_{s,j}, q_{s,j}, 
-                          \{ \phi_{s,j,i} \}_{i \neq j},
-                          \{F_{s,j,t}\}_{t = 1}^{T},
-                          \sigma_{s,j}^2, \tau_{s,j}^2, T \right)$ \\
+(T5.1) & $\Theta_{s,j} = \left( B_{s,p,0}, r_{s,p}, q_{s,p}, 
+                          \{ \phi_{s,p,p'} \}_{i \neq p},
+                          \{F_{s,p,t}\}_{t = 1}^{T},
+                          \Sigma^{(P)}, \Sigma^{(S)},
+                          \sigma^2, \tau_{s,p}^2, T
+                           \right)$ \\
 & \\
 & \textbf{ Initial States ($t = 1$) } \\
-(T5.2) & $B_{s,j,1} = B_{s,j,0} \cdot e^{\epsilon_{s,j,t} - \sigma_{s,j}^2/2}$ \\
+(T5.2) & $B_{s,p,1} = B_{s,p,0} \cdot e^{(\xi_{s,p,t} - \Sigma^{(P)}_{(s,p)}/2) + (\zeta_{s,t} - \Sigma^{(S)}_{(s)}/2) + (\epsilon_{t} - \sigma^2/2) }$ \\
 & \\
 & \textbf{ Catch ($1 \leq t \leq T$) } \\
-(T5.3) & $C_{s,j,t} = \left(1 - e^{F_{s,j,t}}\right)\cdot B_{s,j,t}$ \\
+(T5.3) & $C_{s,p,t} = \left(1 - e^{F_{s,p,t}}\right)\cdot B_{s,p,t}$ \\
 & \\
 & \textbf{ State Dynamics ($2 \leq t \leq T$)} \\
-(T5.4) & $B_{s,j,t} = \left ( B_{s,j,t-1} + r_{s,j}B_{s,j,t-1}\left( 1 - \frac{B_{s,j,t-1}}{B_{s,0}} \right) + \sum_{i \neq j} \phi_{s,j,i} \cdot B_{s,i,t-1} - C_{s,j,{t-1} } \right) \cdot e^{\epsilon_{s,j,t} - \sigma_{s,j}^2/2}$ \\
+(T5.4) & $B_{s,p,t} = \left ( B_{s,p,t-1} + r_{s,p}B_{s,p,t-1}\left( 1 - \frac{B_{s,p,t-1}}{B_{s,0}} \right) + \sum_{p' \neq p} \phi_{s,p,p
+'} \cdot B_{s,p',t-1} - C_{s,p,{t-1} } \right) \cdot$ \\ 
+& ~~~~~~~~~~~~~~~~~~~~~~~~~$e^{(\xi_{s,p,t} - \Sigma^{(P)}_{(s,p)}/2) + (\zeta_{s,t} - \Sigma^{(S)}_{(s)}/2) + (\epsilon_{t} - \sigma^2/2)}$ \\
 & \\
-& \textbf{ Observations ($1 \leq t \leq T$)} \\
-(T5.5) & $I_{s,j,t} = q_{s,j} \cdot B_{s,j,t} \cdot e^{\delta_{s,j,t} - \tau_{s,j}^2/2}$ \\
+& \textbf{ Observation model ($1 \leq t \leq T$)} \\
+(T5.5) & $I_{s,p,t} = q_{s,p} \cdot B_{s,p,t} \cdot e^{\delta_{s,p,t} - \tau_{s,p}^2/2}$ \\
 \hline
 \end{tabular}
 \end{center}
@@ -329,43 +343,46 @@ $\delta_{s,j,t}$ & Observation error for stock $j$ of species $s$ at time $t$ $\
 
 \begin{table}[htbp]
 \begin{center}
-\caption{A truncated version of the hierarchical stock assessment model used as the estimation procedure Chapter 2. The hierarchical model in this version shares a prior distribution on process error deviations $\epsilon_{s,t}$, representing correlations in environmental variation due to species with shared habitat. All variables used here are defined in Table \ref{tab:OMspec}.}\label{tab:Ch2est}
+\caption{A truncated version of the hierarchical stock assessment model used as the estimation procedure Chapter 2. The functions $f_{s,p}(\Theta_{s,p})$ and $f_s(\Theta_s)$ represent the stock and species specific prior distributions that were omitted from the table. All variables used here are defined in Table \ref{tab:Ch2spec}. The notation $\Sigma^{(S)}_{(s)}$ refers to the entry on the main diagonal of $\Sigma^{(S)}$ corresponding to species $s$, with the analagous definition for $\Sigma^{(P)}_{(s,p)}$}\label{tab:Ch2est}
 \begin{tabular}{cl}
 \hline
 & \textbf{Assessment Input Parameters} \\
-(T6.1) & $\Theta_{s,j} = \left( B_{s,j,0}, r_{s,j}, q_{s,j}, 
-                            \{\phi_{s,j,i}\}_{ i \neq j}, \tau_{s,j}^2, \
-                            \left\{ I_{s,j,t} \right\}_{t = 1}^T,
-                            \left\{ C_{s,j,t} \right\}_{t = 1}^T \right)$ \\
-(T6.2) & $\Theta_s = \left( \left\{\Theta_{s,j}) \right\}_{j = 1}^{J_s}, \sigma_s^2 \right)$ \\
+(T6.1) & $\Theta_{s,p} = \left( B_{s,p,0}, r_{s,p}, q_{s,p}, 
+                            \{\phi_{s,p,p'}\}_{ p' \neq p}, \tau_{s,p}^2, \
+                            \left\{ I_{s,p,t} \right\}_{t = 1}^T,
+                            \left\{ C_{s,p,t} \right\}_{t = 1}^T \right)$ \\
+(T6.2) & $\Theta_s = \left( \left\{\Theta_{s,p}) \right\}_{p = 1}^{P_s}, \sigma_s^2 \right)$ \\
+(T6.3) & $\Theta = \left( \left\{\Theta_s)\right\}_{s = 1}^S, \Sigma^{(P)}, \Sigma^{(S)}, \sigma^2 \right)$ \\
 & \\
 & \textbf{ Population Dynamics Model } \\
-(T6.3) & $B_{s,j,1} = B_{s,j,0}$ \\
-(T6.4) & $B_{s,j,t} = \left ( B_{s,j,t-1} + r_{s,j}B_{s,j,t-1}\left( 1 - \frac{B_{s,j,t-1}}{B_{s,j,0}} \right) + \sum_{i \neq j} \phi_{s,j,i} \cdot B_{s,i,t-1} - C_{s,j,{t-1} } \right) \cdot e^{\epsilon_{s,t}}$, $2 \leq t \leq T$, \\
+(T6.3) & $B_{s,p,1} = B_{s,p,0}\cdot e^{(\xi_{s,p,t} - \Sigma^{(P)}_{(s,p)}/2) + (\zeta_{s,t} - \Sigma^{(S)}_{(s)}/2) + (\epsilon_{t} - \sigma^2/2)}$ \\
+(T6.4) & $B_{s,p,t} = \left ( B_{s,p,t-1} + r_{s,p}B_{s,p,t-1}\left( 1 - \frac{B_{s,p,t-1}}{B_{s,0}} \right) + \sum_{p' \neq p} \phi_{s,p,p
+'} \cdot B_{s,p',t-1} - C_{s,p,{t-1} } \right) \cdot$ \\ 
+& ~~~~~~~~~~~~~~~~~~~~~~~~~$e^{(\xi_{s,p,t} - \Sigma^{(P)}_{(s,p)}/2) + (\zeta_{s,t} - \Sigma^{(S)}_{(s)}/2) + (\epsilon_{t} - \sigma^2/2)}$ \\
 & \\
 & \textbf{ Observational Model ($1 \leq t \leq T$)} \\
-(T6.5) & $\bar{I}_{s,j,t} = q_{s,j} \cdot B_{s,j,t} \cdot e^{\delta_{s,j,t}}$ \\
+(T6.5) & $\bar{I}_{s,p,t} = q_{s,p} \cdot B_{s,p,t} \cdot e^{\delta_{s,p,t}}$ \\
 & \\
 & \textbf{ Statistical Model } \\
 & \textit{ Data Likelihood } \\
-(T6.6) &  $\mathcal{L}_{s,j} \left( \left\{ I_{s,t} \right\}_{t = 1}^T ~|~
-                                \Theta_s \right) =
-                         \left(\frac{1}{\sqrt{2\pi \tau_s^2}}\right)^T \cdot
-                         \prod_{t = 1}^T e^{ - \frac{\left(\bar{I}_{s,t}/I_{s,t} \right)^2 }{2\tau_s^2} }$ \\
-& \textit{ Stock Specific Priors } \\
-
-& \textit{ Shared Species Priors } \\
-(T6.7) &  $p ( \epsilon_{s,t} ~|~ \sigma^2 ) = 
-                        \left(\frac{1}{\sqrt{2\pi \sigma^2}}\right)^ST \cdot
-                         \prod_{s = 1}^S\prod_{t = 1}^T e^ { - \frac{\epsilon_{s,t}^2 }{2\sigma^2} }$\\
-& \textit{ Shared Assemblage Priors } \\
+(T6.6) &  $\mathcal{L}_{s,p} \left( \left\{ I_{s,p,t} \right\}_{t = 1}^T ~|~
+                                \Theta_s \right) \sim \log N ( \overline{I_{s,p,t}}, \tau_{s,p}^2 )$ \\
+& \textit{ Species Specific Multistock Priors } \\
+(T6.7) & $p \left( \log q_{s,p} ~|~ \overline{\log q_s}, \kappa_s^2 \right)$\\
+(T6.7) & $p \left( \log r_{s,p} ~|~ \overline{\log r_s}, \rho_s^2 \right)$\\
+& \textit{ Multispecies Priors } \\
+(T6.8) &  $p \left( \zeta_{t} ~|~ \Sigma^{(S)} \right) = N \left( \vec0, \Sigma^{(S)}\right)$\\
+(T6.9) & $p \left( \log q_s ~|~ \overline{\log q}, \kappa^2 \right) \sim N \left( \overline{\log q}, \kappa^2 \right)$ \\
+& \textit{ Multispecies Multistock Priors } \\
+(T6.10) &  $p \left( \xi_{t} ~|~ \Sigma^{(P)} \right) = N \left( \vec0, \Sigma^{(P)}\right)$\\
+(T6.11) &  $p \left( \epsilon_{t} ~|~ \sigma^2 \right) = N \left( 0, \sigma^2 \right)$\\
 & \textit{ Posterior Density } \\
-(T6.8) &  $\mathcal{P} \left( \Theta ~|~ 
-                              \left\{ I_{s,t} \right\}_{(s,t) = (1,1)}^{(S,T)}
-                       \right) = 
-                            \left[ \prod_{s = 1}^S 
-                                \mathcal{L}_s\left( \left\{ I_{s,t} \right\}_{t = 1}^T ~|~ \Theta_s \right) 
-                            \right] \cdot p ( \epsilon_{s,t} ~|~ \sigma^2 )$ \\
+(T6.12) & $\mathcal{P}_{s,p} = \mathcal{L}_{s,p} \cdot p \left( \log q_{s,p} ~|~ \overline{\log q_s}, \kappa_s^2 \right) \cdot p \left( \log r_{s,p} ~|~ \overline{\log r_s}, \rho_s^2 \right) \cdot f_{s,p}(\Theta_{s,p})$ \\
+(T6.13) & $\mathcal{P}_s = \prod_{p = 1}^{P_s} \mathcal{P}_{s,p} \cdot p \left( \log q_{s} ~|~ \overline{\log q}, \kappa^2 \right) + f_s ( \Theta_s ) $ \\
+(T3.11) & $\mathcal{P} = \prod_{s = 1}^S \mathcal{P}_s \cdot
+            \prod_{t = 1}^T \left( p \left( \epsilon_{t} ~|~ \sigma^2 \right) \cdot p \left( \zeta_{t} ~|~ \Sigma^{(S)} \right)
+            \cdot p \left( \xi_{t} ~|~ \Sigma^{(P)} \right) \right ) 
+             $ \\
 \hline
 \end{tabular}
 \end{center}
@@ -383,14 +400,14 @@ $\delta_{s,j,t}$ & Observation error for stock $j$ of species $s$ at time $t$ $\
 
 \begin{table}[htbp]
 \begin{center}
-\caption{Variable definitions for the operating model simulation catch, effort, population dynamics and scientific observations in Chapter 3. The population dynamics are driven by a simple Biomass Dynamics model (Hilborn and Walters, 1992, Ch, 8), with immigration and emigration between stocks of a species summarised by a migration rate $\phi_{s,i,j}$. Catch is based on effort dynamics simulating targeting behaviour of harvesters.}\label{tab:OMspec}
+\caption{Variable definitions for the operating model simulation catch, effort, population dynamics and scientific observations in Chapter 3. The population dynamics are driven by a simple Biomass Dynamics model (Hilborn and Walters, 1992, Ch, 8), with immigration and emigration between stocks of a species summarised by a migration rate $\phi_{s,i,p}$. Catch is based on effort dynamics simulating targeting behaviour of harvesters.}\label{tab:OMspec}
 \begin{tabular}{c|c}
 \textit{Variable} & \textit{Description}  \\
 \hline
 & \textbf{ Index Variables} \\
 \hline
 $s$ & Species index \\
-$j$ & Stock index \\
+$p$ & Stock index \\
 $f$ & Fleet index \\
 $t$ & Time index \\
 $S$ & Total number of species \\
@@ -400,32 +417,32 @@ $T$ & Total number of years \\
 \hline
 & \textbf{ Biological Model} \\
 \hline
-$B_{s,j,t}$ & Biomass of stock $j$ of species $s$ at time $t$ \\
-$B_{s,j,0}$ & Unfished biomass of stock $j$ of species $s$ \\
-$r_{s,j}$ & Intrinsic rate of growth for stock $j$ of speces $s$ \\
-$\phi_{s,j,i}$ &  Net migration rate between stocks $j$ and $i$ of species $s$ \\
+$B_{s,p,t}$ & Biomass of stock $p$ of species $s$ at time $t$ \\
+$B_{s,p,0}$ & Unfished biomass of stock $p$ of species $s$ \\
+$r_{s,p}$ & Intrinsic rate of growth for stock $p$ of speces $s$ \\
+$\phi_{s,p,i}$ &  Net migration rate between stocks $p$ and $i$ of species $s$ \\
 \hline
 & \textbf{ Observation Model} \\
 \hline
-$q_{s,j}$ & Survey catchability of stock $j$ of species $s$ at time $t$ \\
-$I_{s,j,t}$ & Fishery independent CPUE of stock $j$ of species $s$ at time $t$ \\
+$q_{s,p}$ & Survey catchability of stock $p$ of species $s$ at time $t$ \\
+$I_{s,p,t}$ & Fishery independent CPUE of stock $p$ of species $s$ at time $t$ \\
 \hline
 & \textbf{ Catch} \\
 \hline
-$E_{s,j,t,f}$ & Fishing effort expended by fleet $f$ to catch stock $j$ of species $s$ at time $t$ \\
-$C_{s,j,t,f}$ & Total catch of stock $j$ of species $S$ at time $t$ by fleet $f$ \\
-$C_{s,j,t}$ & Total catch of stock $j$ of species $S$ at time $t$ \\
-$F_{s,j,t}$ & Fishing mortality of stock $j$ of species $s$ at time $t$ \\
+$E_{s,p,t,f}$ & Fishing effort expended by fleet $f$ to catch stock $p$ of species $s$ at time $t$ \\
+$C_{s,p,t,f}$ & Total catch of stock $p$ of species $S$ at time $t$ by fleet $f$ \\
+$C_{s,p,t}$ & Total catch of stock $p$ of species $S$ at time $t$ \\
+$F_{s,p,t}$ & Fishing mortality of stock $p$ of species $s$ at time $t$ \\
 \hline
 & \textbf{ Stochastic Model } \\
-$\sigma_{s,j}^2$ & Process error variance for stock $j$ of species $s$ \\
-$\epsilon_{s,j,t}$ & Process error deviation for stock $j$ of species $s$ at time $t$, $\left( \epsilon_{s,j,t} \sim N (0, \sigma_{s,j}^2) \right)$ \\
+$\sigma_{s,p}^2$ & Process error variance for stock $p$ of species $s$ \\
+$\xi_{s,p,t}$ & Process error deviation for stock $p$ of species $s$ at time $t$, $\left( \epsilon_{s,p,t} \sim N (0, \sigma_{s,p}^2) \right)$ \\
 $\sigma_{s}^2$ & Process error variance for species $s$ \\
-$\epsilon_{s,t}$ & Process error deviation for species $s$ at time $t$, $\left( \epsilon_{s,t} \sim N (0, \sigma_s^2) \right)$ \\
+$\zeta_{s,t}$ & Process error deviation for species $s$ at time $t$, $\left( \zeta_{s,t} \sim N (0, \sigma_s^2) \right)$ \\
 $\sigma^2$ & Assemblage level process error variance  \\
 $\epsilon_{t}$ & Assemblage level process error deviations at time $t$, $\left( \epsilon_{t} \sim N (0, \sigma^2) \right)$ \\
 $\tau_s^2$ & Observation error variance for species $s$ \\
-$\delta_{s,j,t}$ & Observation error for stock $j$ of species $s$ at time $t$ $\left(\epsilon_{s,j,t} \sim N (0, \tau_s^2) \right)$ \\
+$\delta_{s,p,t}$ & Observation error for stock $p$ of species $s$ at time $t$ $\left(\epsilon_{s,p,t} \sim N (0, \tau_s^2) \right)$ \\
 \hline
 \end{tabular}
 \end{center}
@@ -441,9 +458,15 @@ $\delta_{s,j,t}$ & Observation error for stock $j$ of species $s$ at time $t$ $\
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{figures/stableRiskRegions.pdf}
-\caption{An example of stable risk regions for each model in Figure \ref{fig:3Models}. The lines at $d_1$ and $d_2$ represent recommended data-requirement policy for each method. Green regions denote the least risky regions, with risk increasing across yellow into red. Green regions have an upper bound due to social factors, such as employment security.}\label{fig:MSMSE}
-\end{figure}
+\includegraphics{figures/ManagementAreas.pdf}
+\caption{The 8 major statistical management areas of the BC integrated groundfish fishery.}\label{fig:statAreas}
+\end{figure}\newpage
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{figures/sabComposition.pdf}
+\caption{The top 15 species ranked by total catch weight (000s t) co-occurring in sets that caught Sablefish by bottom trawl gear from Jan 2009 to March 31, 2012 (left panel) and Apr 2012 to Mar 31, 2015 (right panel). Note that the bars for some top-ranked species have been truncated to fit on the plot; actual total catch weights are indicated to the right of the truncated bars for those species. This composition shows technical interactions between 3 DERPA species in trawl gear that encounters Sablefish.}\label{fig:catchComposition}
+\end{figure}\newpage
 
 \newpage
 

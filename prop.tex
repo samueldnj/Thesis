@@ -1,8 +1,10 @@
 \documentclass[12pt,]{scrartcl}
 \usepackage[letterpaper, margin = 1in, footskip = 0.25in]{geometry}
-\usepackage{amsmath,amssymb,setspace}
+\usepackage{amsmath,amssymb,setspace,mathabx}
 \usepackage{graphicx}
 \usepackage{xcolor}
+\usepackage{lscape}
+\usepackage{verbatim}
 \doublespacing
 
 \providecommand{\tightlist}{%
@@ -76,9 +78,9 @@ Constraining Species}
 
 Sustainable management of any renewable resource requires understanding
 the system dynamics in response to exploitation. In a multispecies
-fisheries context the system is a collection of semi-discrete
+fisheries context, the system is a collection of semi-discrete
 self-sustaining fish populations or \emph{stocks} (Begg, Friedland, \&
-Pearce (1999)), and the exploitation involves removing individuals by
+Pearce (1999)) and the exploitation involves removing individuals by
 fishing. Fishing effort impacts target species, non-target species and
 fish habitat, and therefore a major challenge of multispecies fishery
 management is to balance fishing yield with broader sustainability
@@ -134,7 +136,7 @@ being potentially available to the fishing gear.
 
 Within the single-species paradigm, major stocks typically comprise
 several distinct, but interacting, sub-stocks (Walters \& Martell
-(2004); Ashleen J Benson, Cox, \& Cleary (2015)), such as Pacfic salmon
+(2004); Benson, Cox, \& Cleary (2015)), such as Pacfic salmon
 (\emph{Onchorynchys spp.}) (Simon \& Larkin (1972)). Multiple
 ecologically and technically interacting populations (i.e., stocks) of
 Chinook (\emph{O. tshawtcha}), Chum (\emph{O. keta}), Coho (\emph{O.
@@ -155,17 +157,16 @@ fisheries (English, Edgell, Bocking, Link, \& Raborn (2011); DFO
 (1999)). Managing Pacific salmon in runs has both advantages and
 disadvantages. Aggregation leads to increased management efficiency and
 brings adds statistical benefits from data pooling. However, to avoid
-overfishing due to different productivity levels of member stocks
-(Figure 2), complexes must be managed according to the weakest stock's
-productivity (Ricker (1958); Ricker (1973); Parkinson, Post, \& Cox
-(2004)). The Late run of Fraser river Sockeye is managed for the weakest
-stock: Cultus lake. The Cultus lake stock has historic abundances of up
-to 700,000 spawners, but in 2004 fewer than 100 spawners returned from
-the marine life phase. The decline of Cultus lake Sockeye is caused in
-part by harvesting at average productivity for the complex (Team
-(2009)). The Late run is now harvested according to the productivity of
-the Cultus lake stock in order to avoid this effect on the declining
-population.
+overfishing some stocks (Figure 2), complexes must be managed according
+to the weakest stock's productivity (Ricker (1958); Ricker (1973);
+Parkinson, Post, \& Cox (2004)). The Late run of Fraser river Sockeye is
+managed for the weakest stock: Cultus lake. The Cultus lake stock has
+historic abundances of up to 700,000 spawners, but in 2004 fewer than
+100 spawners returned from the marine life phase. The decline of Cultus
+lake Sockeye is caused in part by harvesting at average productivity for
+the complex (Team (2009)). The Late run is now harvested according to
+the productivity of the Cultus lake stock in order to avoid this effect
+on the declining population.
 
 The aggregate management schema used for Pacific salmon could be
 modified and adopted in other multispecies fisheries. For example,
@@ -197,8 +198,8 @@ around 110 metric tonnes (mt), while lingcod are highly productive with
 annual quota of around 3600mt. Avoidance of Bocaccio by harvesters led
 to less than 33\% of Bocaccio quota to be utilised between 2006 and 2014
 (Figure 4). Technical interactions between Bocaccio and lingcod means
-that this avoidance behaviour resulted in around 25\% of lingcod quota
-being utilised in that same time period (Figure 4). This
+that this avoidance behaviour resulted in a maximum of 25\% of lingcod
+quota being utilised in that same time period (Figure 5). This
 underutilisation translates into a reduction of around \textbf{DOLLAR
 AMOUNT}\footnote{February, 2016 prices \textbf{HEY DUMMY, ADJUST THIS
   FOR NPV}} gross revenue to the BCIGF between 2006 and 2014.
@@ -230,16 +231,15 @@ enabling eco-certification. While more complicated than the single
 specie paradigm, the benefit of assessing previously unassessed species
 may outweigh the costs.
 
-\textbf{Based on a re-ordering of the diagram} Figure 6 shows three
-possible models of fishery operation and management. Models (a) and (b)
-are the current options for assessment in multispecies fisheries. Model
-(a) is the status quo approach of single species stock assessment, where
-every stock is treated as a separate population (Hilborn \& Walters
-(1992)). Model (b) is the total aggregation approach used for Pacific
-salmon (English et al. (2011)), where several species or stocks have
-their data combined and are then assessed and managed as a single unit
-(Sugihara et al. (1984); Gulland \& Garcia (1984); Gaichas et al.
-(2012)).
+Figure 6 shows three possible models of fishery operation and
+management. Models (a) and (b) are the current options for assessment in
+multispecies fisheries. Model (a) is the status quo approach of single
+species stock assessment, where every stock is treated as a separate
+population (Hilborn \& Walters (1992)). Model (b) is the total
+aggregation approach used for Pacific salmon (English et al. (2011)),
+where several species or stocks have their data combined and are then
+assessed and managed as a single unit (Sugihara et al. (1984); Gulland
+\& Garcia (1984); Gaichas et al. (2012)).
 
 The total aggregation approach used by Pacific salmon may not be
 suitable for assessing assemblages of multiple species with distinct
@@ -250,15 +250,15 @@ link the data during estimation (Zhou et al. (2010); A. E. Punt et al.
 (2011); Mueter \& Megrey (2006)).
 
 In Chapters 1, 2 and 3 I conduct a simulation study of a hierarchical
-stock assessment model to share data between species as in model(c) of
-Figure 5 (Jiao, Hayes, \& Cortés (2009); Zhou et al. (2010); A. E. Punt
+stock assessment model to share data between species as in model (c) of
+Figure 6 (Jiao, Hayes, \& Cortés (2009); Zhou et al. (2010); A. E. Punt
 et al. (2011)). The statistical model assumes a hierarchical structure
 of multispecies fisheries as shown in Figure 7, allowing for an an
 intermediate level of aggregation between models (a) and (b) of Figure
-6. Shared parameters in the hierarchical assessment model allow for some
-of the benefits of aggregation for data-limited stocks, but the
-separated data streams allows for species specific estimates of
-abundance and productivity (Jiao et al. (2009)).
+6. Shared parameters in the hierarchical assessment model provide some
+of the benefits of aggregation, but the separation of data streams
+allows for species specific estimates of abundance and productivity
+(Jiao et al. (2009)).
 
 The focus of Chapter 1 is to create a simulation-estimation procedure to
 study hierarchical assessment models for multi-species assemblages with
@@ -268,26 +268,26 @@ estimators (Zhou et al. (2010); A. E. Punt et al. (2011)). The
 statistical performance of the estimators is then quantified by
 comparing the true values of parameters to estimated values.
 
-In Chapter 2, the simulation-estimation procedure incorporates a
-sub-stock structure for each species. Including multiple sub-stocks that
-correspond to possible multi-stock structure increases the resolution of
-the data and allows for deviations from average life history parameter
-values within each species (Su, Peterman, \& Haeseker (2004)). Bias and
-precision are estimated and compared to the results of Chapter 1, to
-analyse the benefits and costs of including increased structure in the
-model.
+In Chapter 2, the simulation-estimation procedure incorporates a spatial
+sub-stock structure for each species (Figure 9). Including multiple
+sub-stocks increases the resolution of the data and allows for multiple
+stock specific life history parameter values within each species (Su,
+Peterman, \& Haeseker (2004)). Bias and precision are estimated and
+compared to coastwide model bias and precision, to analyse the benefits
+and costs of including increased structure in the model.
 
 In Chapter 3, a closed loop feedback simulator is used to evaluate
-management procedures using hierarchical models (Figure 8). This
-involves creating an operating model that simulates population dynamics
-of multiple interacting fish species, effort dynamics of multiple
-fishing fleets with different gear types exploiting those populations
-and uncertain observations made by scientific surveys (Hilborn \&
-Walters (1987); Walters \& Bonfil (1999); M. L. Jones et al. (2009);
-Clark (2010)). Uncertain data provided by the operating model reacts
-with the management procedure to produce complex emergent properties and
-closed loop simulation offers a low-stakes option for analysing those
-properties and the associated risks.
+management procedures using spatially structured multistock and
+multispecies hierarchical models (Figure 10). This involves creating an
+operating model that simulates population dynamics of multiple
+interacting fish species, effort dynamics of multiple fishing fleets
+with different gear types exploiting those populations and uncertain
+observations made by scientific surveys (Hilborn \& Walters (1987);
+Walters \& Bonfil (1999); M. L. Jones et al. (2009); Clark (2010)).
+Uncertain data provided by the operating model react with the management
+procedure to produce complex emergent properties. Closed loop simulation
+offers a low-stakes option for analysing those properties and the
+associated risks.
 
 In Chapter 4, I investigate a data-based approach to avoiding non-target
 species and estimate its economic value. Reliable, spatially explicit
@@ -302,13 +302,13 @@ such as commercial fishing data.
 The British Columbia Integrated Groundfish Fishery (BCIGF) (Fisheries
 and Oceans, Canada (2015)) is a group of 7 fisheries that spatially and
 temporally overlap on the BC coast. The overlapping fisheries are
-managed by one integrated individual transferrable quota system,
-allowing temporary and permanent transfers of quota allocations between
-licenses in different fleets. All catch and discards are deducted from
-quota allocations, and are therefore monitored on 100\% of vessels by at
-sea observer or electronic monitoring systems. Skippers who exceed their
-quota share must either obtain more from other harvesters, or stop
-fishing for the season.
+managed across 8 statistical areas (Figure 11) by one integrated
+individual transferrable quota system, allowing temporary and permanent
+transfers of quota allocations between licenses in different fleets. All
+catch and discards are deducted from quota allocations, and are
+therefore monitored on 100\% of vessels by at sea observer or electronic
+monitoring systems. Skippers who exceed their quota share must either
+obtain more from other harvesters, or stop fishing for the season.
 
 Integrated management of the BCIGF creates pinch-points on quota
 utilisation, caused by technical interactions between directed species
@@ -326,10 +326,22 @@ bilineata}), \textbf{P}etrale sole and \textbf{A}rrowtooth flounder
 called the \textbf{DERPA} complex for brevity. All members of DERPA are
 from the family \emph{Pleuronectidae} of right-eyed flounders, making
 DERPA suitable for a hierarchical approach due to similar but distinct
-life histories. The amount of data available for different DERPA species
-varies, with Rock sole being subject to regular assessments, and Petrale
-sole having no up to date assessments (Driscoll (2014)). Halibut are
-excluded as they are managed by a separate trans-boundary authority.
+life and evolutionary histories. Furthermore, Dover sole, Petrale sole
+and Arrowtooth flounder experience technical interactions in trawl gear
+that encounters Sablefish (Figure 12). Halibut are excluded as they are
+managed by a separate trans-boundary authority.
+
+The amount of data available for DERPA flatfish species varies, and so
+does the timing of stock status assessments. Rock sole was assessed in
+2016 (K. R. Holt, Starr, Haigh, \& Krishka (2016)) and 2014 (DFO
+(2014)), and Arrowtooth flounder in 2015 (DFO (2015)), but before that
+both species were not assessed for close to a decade\footnote{Rock sole
+  were assessed in 2005 in an unpublished working paper, see K. R. Holt
+  et al. (2016).} (Jeff Fargo, Kronlund, Schnute, \& Haigh (2000); Jeff
+Fargo \& Starr (2001)). English and Petrale sole were last assessed in
+2009 (Starr (2009); Starr (070AD)). Dover sole was last assessed in 1999
+and has never been assessed using a model based assessment (J. Fargo
+(1999)). \textbf{\emph{MAKE THIS PARAGRAPH A FIGURE}}
 
 In Chapter 4, I use machine learning methods to forecast the presence of
 sub-legal sized sablefish in fishing events. Sablefish are at historic
@@ -355,10 +367,10 @@ Quantitative stock assessment models incorporate population dynamics
 processes (Figure 1.1), observational data (Figure 1.2) and a
 statistical model (Figure 1.3) (Hilborn \& Walters (1992)). Model inputs
 are candidate parameter values that are confronted by data in the
-statistical model to produce posterior density or likelihood values as
-outputs. Statistical model output is optimised or integrated over the
-input parameters to extend inferences about stock productivity and
-status in the form of distributional estimates.
+statistical model to produce posterior density or likelihood function
+values as outputs. Statistical model output is then optimised or
+integrated over the input parameters to extend inferences about stock
+productivity and status in the form of distributional estimates.
 
 Hierarchical statistical models are becoming increasingly popular for
 analysing complex fisheries data. In Pacific salmon stock and
@@ -375,16 +387,17 @@ identification (Jiao et al. (2009)).
 In this chapter, I use a simulation-estimation procedure to study
 hierarchical Bayesian (Zhou et al. (2010)) and frequentist (A. E. Punt
 et al. (2011)) state space multispecies assessment models. The
-multispecies models are used to simultaneously assess a simulation of
-the DERPA complex of flatfish. In a comparison between single species
-and hierarchical models applied multispecies groups including
+multispecies models are used to simultaneously assess a simulated
+version of the DERPA complex of flatfish. In a comparison between single
+species and hierarchical models applied multispecies groups including
 data-limited species, it has been shown that the hierarchical models
 induce a change in parameter estimates for data-limited species (A. E.
 Punt et al. (2011); Kell \& De Bruyn (2012)). However, it is unknown if
 that change is an increase or decrease in bias.
 
-\textbf{QUESTION:} What is the bias in estimates for abundance and
-productivity produced by hierarchical multispecies models?
+\textbf{QUESTION:} How do estimates of unfished biomass \(B_0\), growth
+\(r\) and catchability \(q\) made by hierarchical multispecies models
+compare to estimates from single species models?
 
 Simulated scientific and commercial data are used to test hierarchical
 assessment models. True parameter values used for simulation can be
@@ -395,27 +408,28 @@ between species, and contrasts in data availability.
 
 \subsection{Methods}\label{methods}
 
-Each species in the DERPA complex simulated independently using the
-model defined in Table 2. Population dynamics are simulated by a simple
-biomass dynamics process error-model (Figure 1.1, Eqs T2.2, T2.4),
-fishery dependent catch is generated using fishing mortality as an input
-(Eq T2.3) and fishery independent observations of catch per unit effort
-(CPUE) are generated by the observational model (Figure 1.2, Eq T2.5).
+Each species in the DERPA complex is simulated using the model defined
+in Table 2. Population dynamics are simulated by a simple biomass
+dynamics process error-model (Figure 1.1, Eqs T2.2, T2.4), fishery
+dependent catch is generated using fishing mortality as an input (Eq
+T2.3) and fishery independent observations of catch per unit effort
+(CPUE) are generated by the observation model (Figure 1.2, Eq T2.5).
 
 Multispecies data produced by the simulation model are supplied to both
 a Bayesian and frequentist version of a hierarchical state-space
 assessment model (Figure 7). Both assessment models are specified in the
 same way, shown in Table 3. The difference between the models is in how
 the inferences are extended. For the Bayesian state space model the
-posterior density (Eq. T3.8) is integrated over all input parameters
-producing marginal distributions for each parameter (Gelman, Carlin,
-Stern, \& Rubin (2014)). For the frequentist state space model, also
-known as a random effects model, the posterior density is integrated
-over the priors to produce a marginal ``true'' likelihood, which is then
+posterior density (Eq. T3.8) is integrated over all parameters included
+in \(\Theta\) (Eq T3.2) to produce marginal distributions for each
+parameter (Gelman, Carlin, Stern, \& Rubin (2014)). For the frequentist
+state space model, also known as a random effects model, the posterior
+density is integrated over random effects (process errors) and prior
+distributions to produce a marginal ``true'' likelihood, which is then
 maximised as in traditional likelihood methods (de Valpine \& Hastings
 (2002)).
 
-Both models require a numerical integration method to produce marginal
+Both models require an integration method to produce marginal
 distributions or likelihoods (de Valpine \& Hastings (2002); Gelman et
 al. (2014), Maunder, Deriso, \& Hanson (2015)). Integration generally
 requires numerical methods like Markov-Chain Monte Carlo (MCMC)
@@ -425,8 +439,8 @@ Automatic Differentiation Model Builder (ADMB) suite (Fournier et al.
 (2012)) and the random effects model using Template Model Builder
 (Kristensen, Nielsen, Berg, Skaug, \& Bell (2015)). Both software
 packages provide fast numerical integration to produce marginal
-distributions, with TMB being developed specifically for random effects
-models.
+distributions, with TMB being developed specifically for models
+utilising a large number of random effects.
 
 Model testing proceeds through four experimental scenarios that modify
 simulation input parameters representing multispecies interactions and
@@ -435,29 +449,32 @@ to their true values generated by the simulator to estimate bias and
 precision of the models in each scenario.
 
 The first two scenarios investigate model assumptions about process
-error deviations \(\epsilon_{s,t}\) and species catchability
+error deviations \(\epsilon_{t}, \zeta_t\) and species catchability
 coefficients \(q_s\). Both parameters are representive of interactions
 between species in the complex. For example, species that share the same
 habitat will encounter the same environmental variation, reflected in
-process error deviations (A. E. Punt et al. (2011)). Similarly, species
-that are fished by the same gear may have similar interactions with
-fishing gear leading to correlations in catchability.
+coastwide process error deviations \(\epsilon_t\) (A. E. Punt et al.
+(2011)). Moreover, interactions between each of the species may cause
+correlations in their species speficic process errors \(\zeta_t\),
+reflected in the covariane matrix \(\Sigma\). Similarly, species that
+are fished by the same gear may have similar interactions with fishing
+gear leading to correlations in catchability \(q_s\).
 
-Shared priors are defined for process error deviations (T3.7) and
-catchability parameters (T3.8). Bias and precision are measured for a
-range of fixed values of the prior variance (eg
-\(\sigma^2 \in (0,\infty)\)) (Gelman et al. (2014), Ch 5.5).
+Shared priors are defined for process error deviations (Eqs T3.7, T3.8)
+and catchability parameters (Eq T3.9). Bias and precision are measured
+for a range of fixed values of the prior variance
+(\(\sigma^2, \kappa^2 \in (0,\infty)\)) (Gelman et al. (2014), Ch 5.5)
+and multiple configurations of the covariance matrix \(\Sigma\).
 
-The remaining two scenarios test contrasts in observation error variance
-\(\tau_s^2\) between species and fishery development histories
-\(F_{s,t}\), representing data or information available to fishery
-managers. Observation error is a direct measurment of the quality of
-data obtained by scientific surveys, so contrasts in observation error
+The remaining two scenarios contrast information available from survey
+observations and resource responses to exploitation pressure.
+Observation error is a direct measurement of the quality of data
+obtained by scientific surveys, so contrasts in observation error
 variance \(\tau_s^2\) simulate differing levels of data availability
-between species in an assemblage. Fishery development histories are also
-a source of information, due to the way a fish population will respond
-to differing levels of exploitation (Hilborn \& Walters (1992), Ch 2).
-\textbf{MAKE FIGURE of Ft trajectories}
+between species in an assemblage. Fishery development histories,
+characterised by fishing mortality \(F_{s,t}\) trajectories (Figure 8),
+are a source of information based on the way a fish population responds
+to changes in fishing pressure (Hilborn \& Walters (1992), Ch 2).
 
 \subsection{Expected Results}\label{expected-results}
 
@@ -483,9 +500,9 @@ helpful for fisheries in which there are limited historical fishing and
 scientific data available, or limited resources for improving existing
 scientific surveys.
 
-\section{Chapter 2: Adding Multistock Structure to Multispecies
+\section{Chapter 2: Adding Spatial Multistock Structure to Multispecies
 Hierarchical Stock Assessment
-Models}\label{chapter-2-adding-multistock-structure-to-multispecies-hierarchical-stock-assessment-models}
+Models}\label{chapter-2-adding-spatial-multistock-structure-to-multispecies-hierarchical-stock-assessment-models}
 
 \subsection{Background}\label{background-2}
 
@@ -495,7 +512,7 @@ Quinn, Schindler, \& Rogers (2003); Schindler et al. (2010)). Management
 of exploited fishes without acknowledgement of this variation risks
 eroding biodiversity and increasing species vulnerability to
 environmental variation (Hilborn et al. (2003); Cope \& Punt (2011);
-Ashleen J Benson et al. (2015)).
+Benson et al. (2015)).
 
 Aggregation of sub-stocks into a single management unit over large
 spatial scales relies on assumed rescue effects that do not exist in
@@ -506,7 +523,7 @@ effects are then believed to reduce the risks of managing spatially
 complex species in a single aggregate (Cope \& Punt (2011)). However,
 this rescue effect is highly dependent on dispersal and recruitment
 patterns in the meta-population and individual natural mortality rates
-of sub-stocks (Ashleen Julia Benson (2011)).
+of sub-stocks (Benson et al. (2015)).
 
 When stock structure is easily identified, as with Pacific salmon, there
 are advantages to managing a species at the level of individual stocks.
@@ -514,15 +531,16 @@ For example, by estimating productivity levels for 43 individual stocks
 of Pink salmon the effects of local variation in sea surface temperature
 could be discovered (Su et al. (2004)). Furthermore, estimating
 individual productivity levels within a management complex reduces the
-risk of overfishing weak stocks due to an averaging effect (Figure 2).
+risk of overfishing weak stocks whose productivity is less than the
+aggregate's (Figure 2).
 
-Managing multistocks also has its challenges. When the exact nature and
-connectedness of the spatial stock structure is unknown, it is unclear
-whether or not aggregation is the more precautionary management approach
-(Ashleen J Benson et al. (2015)). Furthermore, for a data-limited
-species further disaggregation of the data will only raise further
-barriers to stock assessment by reducing the amount of data available
-for each sub-stock.
+Managing multistock populations also has its challenges. When the exact
+nature and connectedness of the spatial stock structure is unknown, it
+is unclear whether or not aggregation is the more precautionary
+management approach (Benson et al. (2015)). Furthermore, for a
+data-limited species further disaggregation of the data will only
+deplete the quantity of data available in each strata at the finer
+resolution, raising further barriers to assessment.
 
 A hierarchical stock assessment model may overcome data limitations from
 disaggregation when managing for multiple stocks in a multispecies
@@ -547,28 +565,48 @@ estimates, and bias and precision are compared.
 
 \subsection{Methods}\label{methods-1}
 
-The DERPA complex is simulated as individual stocks \(j\) of each
-species \(s\) (Table 5). Migration from stock \(i\) to stock \(j\)
-within species \(s\) is possible with net migration rate
-\(\phi_{s,i,j}\), making stock dynamics interdependent (T5.4).
+The DERPA complex is simulated as individual stocks \(p\) of each
+species \(s\) (Table 5), with stocks corresponding to the discrete
+populations identified in stock previous stock assessments (J. Fargo
+(1999); Starr (070AD); Starr (2009); DFO (2015); K. R. Holt et al.
+(2016)) (Figure 11). Migration from stock \(p\) to stock \(p'\) within
+species \(s\) is possible with net migration rate \(\phi_{s,p,p'}\),
+making stock population dynamics interdependent (Eq T5.4).
 
-The estimation procedure includes a layer of hierarchical structure to
-include multiple substocks for each species (Figure 8(b)). The multiple
-stocks within a species share prior distributions on life history
-parameters at the species level. The hyperparameters of shared priors at
-the species level then share hyperpriors with other species at the
-assemblage level.
+Population dynamics are affected by environmental process errors with
+three components. The first component \(\epsilon_t\) affects all
+populations identically. The second component \(\zeta_t\) affects stocks
+within species identically, and between species according to the
+covariance matrix \(\Sigma^{(S)}\). Finally, the third component
+\(\xi_t\) is stock specific, with draws correlated according to the
+covarance matrix \(\Sigma^{(P)}\). The stock specific component is meant
+to capture spatial covariation between stocks of different species that
+share the same habitat.
 
-Six experimental scenarios evaluated by estimating bias and precision
-extend the four outlined in Chapter 1. The original four will be
-extended to account for the increased depth in the assemblage structure.
-The first additional scenario models increased data-limitation
-introduced by disaggregating an already data-limited species into
-multiple stocks. Disaggregation could lead to increased observation
-error variance or entirely missing observations for some stocks. The
-final additional experiment introduces spatial covariation in the state
-dynamics simulation for each stock (\textbf{FIGREF??}) and tests the
-benefit of including spatial variation in the estimator.
+The multistock estimation procedure has three layers of hierarchical
+structure to include multiple species, each containing multiple stocks
+(Figure 9). The multiple stocks within each species share prior
+distributions on growth \(r\) and catchability \(q\) parameters at the
+species level (Figure 9(b); Eqs T6.7, T6.8). The multistock prior mean
+catchabilities at the species level then share a multispecies prior
+(Figure 9(c); Eq T6.10). Additionally, the process error components are
+shared at the appropriate level (Eqs T6.9, T6.11, T6.12).
+
+Five experimental scenarios are designed to evaluate bias and precision
+of the multistock estimator as functions of data quality contrasts,
+fishery development history and covariation due to shared environment.
+Four scenarios are extended from Chapter 1 to account for increased
+depth in the assemblage structure, including covaration between species
+in \(\Sigma^{(S)}\) and covariation between stocks in \(\Sigma^{(P)}\).
+The additional scenario models increased data-limitation introduced by
+disaggregating an already data-limited species into multiple stocks.
+Disaggregation could lead to increased observation error variance or
+entirely missing observations for some stocks.
+
+Finally, the multistock estimator is compared to the coastwide estimator
+in Table 3. The coastwide model uses aggregated data from the multistock
+simulator, and the 5 scenarios of the previous paragraph are repeated.
+Bias and precision are recorded and compared between estimators.
 
 \subsection{Expected Results}\label{expected-results-1}
 
@@ -577,9 +615,9 @@ and their application in a multistock context. Adding stock structure
 involves increased model complexity and reduced data availability due to
 disaggregation, introducing a tradeoff. This tradeoff is then evaluated
 by varying data availability and model complexity and examining how
-model bias and precision change. A publication detailing the tradeoffs
-between bias and precision under different model structures is expected
-to result from this analysis.
+model bias and precision change for the coastwide and multistock models.
+A publication detailing the tradeoffs between bias and precision under
+different model structures is expected to result from this analysis.
 
 \section{Chapter 3: Management Performance of Hierarchical Multispecies
 Assessment
@@ -587,15 +625,15 @@ Models}\label{chapter-3-management-performance-of-hierarchical-multispecies-asse
 
 \subsection{Background}\label{background-3}
 
-The fisheries management procedure extends beyond the stock assessment
-model (Figure 1). Stock assessment output (Figure 1.3) informs a
-decision rule (Figure 1.4) that determines the amount of fishing effort
-expended to collect the harvest quota (Figure 1.5). This effort
-dynamically impacts fish populations and their habitat (Figure 1.1),
-providing new data (Figure 1.2) that is used for assessment.
+Fisheries management procedures extend beyond the stock assessment model
+(Figure 1). Stock assessment output (Figure 1.3) informs a decision rule
+(Figure 1.4) that determines the amount of fishing effort expended to
+collect the harvest quota (Figure 1.5). This effort dynamically impacts
+fish populations and their habitat (Figure 1.1), providing feedback in
+the form of new data (Figure 1.2) that is used for assessment.
 
 An important test for an assessment model is how it performs as part of
-a management procedure. Management procedures include harvest
+a feedback management procedure. Management procedures include harvest
 strategies, which are input or output controls on the fishery (Hilborn
 \& Walters (1992), Ch. 15) and decision rules that scale controls to
 stock status. Management procedures made up of decision rules, harvest
@@ -603,7 +641,7 @@ strategies and assessment models represent the full management cycle of
 a fishery.
 
 In this chapter, I use closed loop simulation to test management
-procedures based on a hierarchical multispecies stock assessment model.
+procedures based on hierarchical multispecies stock assessment models.
 Closed loop simulation modeling explicitly quantifies feedback in a
 dynamic system (de la Mare (1998); Sainsbury, Punt, \& Smith (2000)). In
 a fisheries management context, the closed loop includes the management
@@ -612,67 +650,74 @@ loop (Figure 9). The fishery, population dynamics and scientific survey
 are part an operating model (M. L. Jones et al. (2009)) that provide
 data to the assessment model and harvest control rule as part of a
 management procedure. Management procedure evaluation then proceeds by
-experimentally adjusting model parameters and observing the emergent
-behaviour. In this way, potential risks of management can be quantified
-under a given set of assumptions.
+experimentally adjusting operating model and assessment model parameters
+and observing the emergent behaviour. In this way, potential risks of
+management can be quantified under a given set of assumptions.
 
-Simulating a multistock, multispecies fishery requires a more
-sophisticated simulator than in Chapters 1 and 2. For example,
-harvesters expend fishing effort based on expected costs and benefits of
-fishing, including expected catch composition and personal risk.
-
-\textbf{QUESTION:} How can realistic targeting behaviour be included in
-the operating model?
-
-Targeting behaviour comes down to when and where harvesters expend their
-effort. That is, targeting behaviour can be simulated by including
-fishing effort dynamics for multiple fishing fleets (gear types) in the
-operating model (Hilborn \& Walters (1987)). These dynamics are based on
-estimates of fishery dependent catchability \(q_{f,s,t}\) (Table 7) can
-be empirically drawn from commercial data or simulated parametrically.
-
-Once realistic effort dynamics are included in the operating model,
-inherent risks of assessment model assumptions can be assessed across
-multiple experimental scenarios. Experiments include contrast in
-data-quality, taking into account spatial covariation due to
-environmental forcing (Dichmont, Deng, Punt, Venables, \& Haddon (2006))
-.
+Realistic predictions about management procedure performance require a
+complex operating model that can accurately reflect fishery history.
+Historical exploitation patterns are dependent on the spatial
+distribution of fishing effort, induced by targeting behaviour of
+harvesters (Hilborn \& Walters (1987); Walters \& Bonfil (1999); Walters
+\& Martell (2004) Ch. 9.3). Targeting behaviour is dependent on several
+factors, including catch composition and expected financial reward, and
+can be simulated by including a fishing effort dynamics model for
+multiple fishing fleets (gear types) in the operating model. Effort
+dynamics are based on fishery dependent catchability parameters
+\(q_{f,s,t}\) (Table 7), which can be empirically estimated from
+commercial data or parametrically simulated.
 
 \textbf{QUESTION:} How do multispecies hierarchical assessment models
 perform when managing multispecies assemblages containing data limited
 stocks, with performance measured by probability of overfishing,
 underfishing and variation in annual catch?
 
-I answer this question by running experimental scenarios that measure
-the relationship between management risks and data quality. For example,
-risk countour plots (\textbf{FIGURE}) could help inform policy for the
-application of hierarchical assessment models or communication with
-stakeholders when providing harvest advice.
+I answer this question by running closed loop simulations of the DERPA
+complex under different management and ecological scenarios. A validated
+operating model that accurately reflects historical fishery effort and
+observed population dynamics is used to simulate management procedures
+forward in time and assess risks of future management decisions. Risks
+of assessment model errors, harvest control rules and effort dynamics
+can be tested across multiple experimental operating model scenarios and
+management. Experiments include contrasts in data-quality between
+species, spatial aggregation of multistock structure, covariation due to
+environmental forcing (Dichmont, Deng, Punt, Venables, \& Haddon
+(2006)), and changes in effort dynamics brought about by changing costs
+and benefits of fishing.
 
 \subsection{Methods}\label{methods-2}
 
-The closed loop simulation extends the simulation model of Chapter 2
-into an operating model including effort dynamics (Tables 7, 8 \textbf{8
-not done yet}). At each time step \(t\), the current state of each fish
-population is estimated by the assessment model. Asessment models then
-forecast abundance at time \(t+1\), which is passed through a harvest
-control rule (HCR) to generate a total allowable catch (TAC) or each
-species. The TAC for each species is then supplied to the operating
-model, which distributes fishing effort (Hilborn \& Walters (1987))
-across space in order to maximise some objective, such as fishing
-profit, subject to the constraints of the TAC.
+The closed loop simulator of the DERPA complex requires an operating
+model including effort dynamics (Table 7; M. L. Jones et al. (2009)).
+Four classes of model are available for simulating short term
+distribution of fishing effort (Walters \& Martell (2004), Ch. 9.3).
+From least to most complex the four classes are: gravity models (Walters
+\& Bonfil (1999)), ideal free distribution (IFD) models (Benson et al.
+(2015)), sequential effort allocation models (Hilborn \& Walters (1987))
+and individual based models.
 
-Fishing effort dynamics are simulated by through a 2 stage procedure at
-each time step (Hilborn \& Walters (1987)). First, some test fishing is
-conducted by expending a unit of effort in each fleet and fishing
-location (statistical area). Then, based on fleet objectives and
-observed fishery dependent catch rates, the operating model will
-distribute effort to maximise the objective subject to the TAC for every
-species. It is possible that these dynamics will lead to underutilised
-quota for some species, effectively simulating pinch-points.
+For spatial allocation of fishing effort I use a simplified IFD model
+(Walters \& Bonfil (1999)) with numerical effort response (Cox \&
+Walters (2002)) \textbf{INCLUDE IN A TABLE}. The large spatial scale of
+discrete stocks in the DERPA complex means that effort is calculated at
+the scale of statistical areas - Fit to commercial data and ex-vessel
+prices (market forces) - Inclusion of the costs of fishing (spatial
+costs, distance from home prot) - Project forward - Numerical effort
+response (Cox \& Walters (2002)) may be used to improve the fit to data
+in the pinch-point case (decrease in species X reduces quota and
+decreases vulnerability of species Y) - Is an IFD better? Walters and
+Martell think so.
+
+At each time step \(t\), the current state of each fish stock or species
+is estimated by the assessment model. Asessment models then forecast
+abundance at time \(t+1\), which is passed through a harvest control
+rule (HCR) to generate a total allowable catch (TAC) for each species.
+The TAC for each species is then supplied to the operating model, which
+distributes fishing effort across the space in order to maximise some
+objective, such as profit, subject to the constraints of the TAC.
 
 Management procedures featuring assessment models from Chapters 1 and 2
-areused in experimental scenarios. Experiments test a range of
+are used in experimental scenarios. Experiments test a range of
 observation error variances, process error variances, fishery
 development history and correlations in catchability \(q_{s,j,t}\). Each
 simulation measures quota utilisation, species depletion, probability of
@@ -811,7 +856,7 @@ sorting discards from the catch, as well as the value of landed catch.
   species.
 \end{itemize}
 
-\section{Conclusions}\label{conclusions}
+\section{Conclusion}\label{conclusion}
 
 This thesis will undertake a study of stock assessment methods for
 assemblages of multiple interacting species. The focus is on the Robin
@@ -869,7 +914,14 @@ the fishery. The goal of a practical, stake-holder driven management
 approach is to simultaneously improve the sustainability
 (intergenerational equity) and profitability of multispecies fisheries.
 
-\section{Biblography}\label{biblography}
+\section*{References}
+\setlength{\parindent}{-0.2in}
+\singlespacing
+\small
+\setlength{\leftskip}{0.2in}
+\setlength{\parskip}{8pt}
+\vspace*{-0.4in}
+\noindent
 
 \hypertarget{refs}{}
 \hypertarget{ref-baudron2015adverse}{}
@@ -881,11 +933,6 @@ ban? \emph{Fish and Fisheries}, \emph{16}(4), 563--575.
 Begg, G. A., Friedland, K. D., \& Pearce, J. B. (1999). Stock
 identification and its role in stock assessment and fisheries
 management: An overview. \emph{Fisheries Research}, \emph{43}(1), 1--8.
-
-\hypertarget{ref-benson2011evaluation}{}
-Benson, A. J. (2011). \emph{An evaluation of the opportunities and
-impediments in managing quota fisheries for biodiversity} (PhD thesis).
-Environment: School of Resource; Environmental Management.
 
 \hypertarget{ref-benson2015evaluating}{}
 Benson, A. J., Cox, S. P., \& Cleary, J. S. (2015). Evaluating the
@@ -915,6 +962,12 @@ Cope, J. M., \& Punt, A. E. (2011). Reconciling stock assessment and
 management scales under conditions of spatially varying catch histories.
 \emph{Fisheries Research}, \emph{107}(1), 22--38.
 
+\hypertarget{ref-cox2002modeling}{}
+Cox, S. P., \& Walters, C. (2002). Modeling exploitation in recreational
+fisheries and implications for effort management on british columbia
+rainbow trout lakes. \emph{North American Journal of Fisheries
+Management}, \emph{22}(1), 21--34.
+
 \hypertarget{ref-crowder1998fisheries}{}
 Crowder, L. B., \& Murawski, S. A. (1998). Fisheries bycatch:
 Implications for management. \emph{Fisheries}, \emph{23}(6), 8--17.
@@ -932,6 +985,16 @@ Monographs}, \emph{72}(1), 57--76.
 \hypertarget{ref-DFO1999Fraser-River-Ch}{}
 DFO. (1999). \emph{Fraser river chinook salmon} (No. D6-11). DFO Science
 Stock Status Report.
+
+\hypertarget{ref-dfo2014stock-asse}{}
+DFO. (2014). Stock Assessment and Harvest Advice for Rock Sole
+\emph{(lepidopsetta spp.)} in British Columbia. \emph{DFO Can. Sci. Adv.
+Sec. Sci. Advis. Rep.}, (2014/039).
+
+\hypertarget{ref-dfo2015arrowtooth}{}
+DFO. (2015). Arrowtooth Flounder \emph{(atheresthes stomias)} stock
+assessment for the west coast of British Columbia. \emph{DFO Can. Sci.
+Advis. Sec. Sci. Advis. Rep.}, (2015/055).
 
 \hypertarget{ref-dichmont2006management2}{}
 Dichmont, C. M., Deng, A. R., Punt, A. E., Venables, W., \& Haddon, M.
@@ -955,6 +1018,21 @@ S. W. (2011). Fraser river sockeye fisheries and fisheries management
 and comparison with bristol bay sockeye fisheries. \emph{The Cohen
 Commission of Inquiry into the Decline of Sockeye Salmon in the Fraser
 River}.
+
+\hypertarget{ref-fargo1999flatfish-s}{}
+Fargo, J. (1999). Flatfish stock assessments for the west coast of
+Canada for 1999 and recommended yield options for 2000. \emph{DFO Can.
+Stock. Assess. Sec. Res. Doc.}, (1999/199), 51.
+
+\hypertarget{ref-fargo2001turbot-sto}{}
+Fargo, J., \& Starr, P. J. (2001). Turbot Stock Assessment for 2001 and
+Recommendations for Management in 2002. \emph{DFO Can. Sci. Advis. Sec.
+Advis. Res. Doc.}, (2001/150), 70.
+
+\hypertarget{ref-fargo2000stock-asse}{}
+Fargo, J., Kronlund, A. R., Schnute, J. T., \& Haigh, R. (2000). Stock
+assessment of rock sole and Petrale sole in Hecate Strait for 2000/2001.
+\emph{DFO Can. Stock. Assess. Res. Doc.}, (2000/166), 83.
 
 \hypertarget{ref-PRIFMP2015}{}
 Fisheries and Oceans, Canada. (2015). Pacific Region Integrated
@@ -1010,7 +1088,7 @@ stock and fleet dynamics in spatially heterogeneous fisheries.
 \hypertarget{ref-hilborn1992quantitative}{}
 Hilborn, R., \& Walters, C. J. (1992). \emph{Quantitative fisheries
 stock assessment: Choice, dynamics and uncertainty/Book and disk}.
-Springer Science \&amp; Business Media.
+Springer Science \& Business Media.
 
 \hypertarget{ref-hilborn2004beyond}{}
 Hilborn, R., Punt, A. E., \& Orensanz, J. (2004). Beyond band-aids in
@@ -1021,6 +1099,12 @@ Science}, \emph{74}(3), 493--507.
 Hilborn, R., Quinn, T. P., Schindler, D. E., \& Rogers, D. E. (2003).
 Biocomplexity and fisheries sustainability. \emph{Proceedings of the
 National Academy of Sciences}, \emph{100}(11), 6564--6568.
+
+\hypertarget{ref-holt2016stock-asse}{}
+Holt, K. R., Starr, P. J., Haigh, R., \& Krishka, B. (2016). Stock
+Assessment and Harvest Advice for Rock Sole (\emph{Lepidopsetta spp.})
+in British Columbia. \emph{DFO Can. Sci. Advis. Sec. Res. Doc.},
+(2016/009), ix + 256.
 
 \hypertarget{ref-hutchings2012canada}{}
 Hutchings, J. A., Côté, I. M., Dodson, J. J., Fleming, I. A., Jennings,
@@ -1170,6 +1254,17 @@ the portfolio effect in an exploited species. \emph{Nature},
 \hypertarget{ref-simon1972stock}{}
 Simon, R. C., \& Larkin, P. A. (1972). \emph{The stock concept in
 pacific salmon}. University of British Columbia.
+
+\hypertarget{ref-starr2009petrale-so}{}
+Starr, P. J. (070AD). Petrale sole (\emph{eopsetta jordani}) in British
+Columbia, Canada: Stock Assessment for 2006/07 and Advice to Managers
+for 2007/08. \emph{DFO Can. Sci. Advis. Sec. Res. Doc.}, v + 134.
+
+\hypertarget{ref-starr2009english-so}{}
+Starr, P. J. (2009). English Sole (\emph{Parophrys vetulus}) in British
+Columbia, Canada: Stock Assessment for 2006/07 and Advice to Managers
+for 2007/08. \emph{DFO Can. Sci. Advis. Sec. Res. Doc.}, (2009/069), v +
+149.
 
 \hypertarget{ref-su2004spatial}{}
 Su, Z., Peterman, R. M., \& Haeseker, S. L. (2004). Spatial hierarchical
