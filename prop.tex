@@ -688,7 +688,15 @@ and benefits of fishing.
 \subsection{Methods}\label{methods-2}
 
 The closed loop simulator of the DERPA complex requires an operating
-model including effort dynamics (Table 7; M. L. Jones et al. (2009)).
+model including effort dynamics (Table 7; M. L. Jones et al. (2009)). At
+each time step \(t\), the current state of each fish stock or species is
+estimated by the assessment model. Asessment models then forecast
+abundance at time \(t+1\), which is passed through a harvest control
+rule (HCR) to generate a total allowable catch (TAC) for each species.
+The TAC for each species is then supplied to the operating model, which
+distributes fishing effort across the space in order to maximise some
+objective, such as profit, subject to the constraints of the TAC.
+
 Four classes of model are available for simulating short term
 distribution of fishing effort (Walters \& Martell (2004), Ch. 9.3).
 From least to most complex the four classes are: gravity models (Walters
@@ -697,28 +705,30 @@ From least to most complex the four classes are: gravity models (Walters
 and individual based models.
 
 For spatial allocation of fishing effort I use a simplified IFD model
-(Walters \& Bonfil (1999)) with numerical effort response (Cox \&
-Walters (2002)) \textbf{INCLUDE IN A TABLE}. The large spatial scale of
-discrete stocks in the DERPA complex means that effort is calculated at
-the scale of statistical areas - Fit to commercial data and ex-vessel
-prices (market forces) - Inclusion of the costs of fishing (spatial
-costs, distance from home prot) - Project forward - Numerical effort
-response (Cox \& Walters (2002)) may be used to improve the fit to data
-in the pinch-point case (decrease in species X reduces quota and
-decreases vulnerability of species Y) - Is an IFD better? Walters and
-Martell think so.
+(Walters \& Bonfil (1999)) with a numerical effort response model for
+fish vulnerability (Cox \& Walters (2002)) \textbf{INCLUDE MATH IN A
+TABLE}. The IFD model is chosen because of the large spatial scale of
+discrete stocks in the DERPA complex (Figure 11), allowing for the more
+complex IFD model over the simplified gravity model more suited to finer
+resolution. The numerical effort response model allows for the
+transition of individuals to and from a vulnerable state, reflecting the
+reality that not all habitat can be fished by all gear.
 
-At each time step \(t\), the current state of each fish stock or species
-is estimated by the assessment model. Asessment models then forecast
-abundance at time \(t+1\), which is passed through a harvest control
-rule (HCR) to generate a total allowable catch (TAC) for each species.
-The TAC for each species is then supplied to the operating model, which
-distributes fishing effort across the space in order to maximise some
-objective, such as profit, subject to the constraints of the TAC.
+External economic forces are included as part of the effort dynamics
+model. The IFD model ranks the quality of each fishing site by the
+profitability \(pr_i\) of fishing at site \(i\). Profitability is a
+function of fishing cost (fuel, deckhands, catch handling), ex-vessel
+sale price of catch and the price to acquire necessary quota for
+bycatch. Quota prices are subject to market forces, such as scarcity,
+meaning bycatch quota for pinch-point species can at times exceed the
+ex-vessel sale price of that species (\textbf{REFERENCE??}), decreasing
+the expected profitability of a given site and affecting harvester
+behaviour.
 
-Management procedures featuring assessment models from Chapters 1 and 2
-are used in experimental scenarios. Experiments test a range of
-observation error variances, process error variances, fishery
+The closed loop simulation tests future performance of management
+procedures using single species, coastwide multispecies and multistock
+multispecies models in experimental scenarios. Experiments test a range
+of observation error variances, process error variances, fishery
 development history and correlations in catchability \(q_{s,j,t}\). Each
 simulation measures quota utilisation, species depletion, probability of
 exceeding optimal instantaneous fishing mortality and annual average
@@ -728,22 +738,21 @@ procedure.
 
 \subsection{Expected Results}\label{expected-results-2}
 
-For each experiment a plot of overfishing risk as a function of contrast
-like Figure (\textbf{FIGURE}) will be produced. This plot will show
-contours of probability that the actual fishing mortality rate \(F_t\)
-is greater than the fishing mortality rate giving MSY \(F_{MSY}\). The
-\(y\)-axis will show target fishing mortality \(F_t\) or effort \(E_t\),
-and the \(x\)-axis will show the parameter driving the contrast.
+This chapter is expected to result an understanding of how hierarchical
+management procedures perform in multispecies fisheries. Performance of
+both coastwide and multistock models is compared in closed loop
+simulation against the status quo management of the DERPA complex, which
+involves intermittent assessments at best. Furthermore, simulations of
+the DERPA complex status quo management may uncover risks unconsidered
+in the current management system.
 
-\begin{itemize}
-\tightlist
-\item
-  Contour plot
-\item
-  Operating model
-\item
-  Paper
-\end{itemize}
+Results are to be published in at least one article in the primary
+literature. The effort dynamics are expected to combine with
+multispecies catch and quota allocation to produce emergent pinch-point
+effects within the management system leading to underfishing of some
+species, forming the basis of one article. Depending on the novelty and
+complexity of the market forces influencing the IFD effort dynamics
+simulator, a second article may be warranted.
 
 \section{Chapter 4: Avoiding non-target
 species.}\label{chapter-4-avoiding-non-target-species.}
@@ -841,78 +850,70 @@ sorting discards from the catch, as well as the value of landed catch.
 
 \subsection{Expected Results}\label{expected-results-3}
 
-\begin{itemize}
-\tightlist
-\item
-  A conclusion on the feasibility of avoidance based on commercial data
-  retained by monitoring.
-\item
-  Maps of encounter probability for ease of communication to harvesters
-\item
-  The basis of a fleet communication system for avoidance of non-target
-  species and possible DOM
-\item
-  Estimates of the economic benefit of a tool for avoiding non-target
-  species.
-\end{itemize}
+It is expected that machine learning will be economically feasible for
+the avoidance of non-target species. However, the net benefit is
+expected to depend on the nature of the species being avoided. For
+example, pinch-point species with restrictive quota that is costly to
+acquire, such as Yelloweye rockfish, may result in a greater net
+benefit, while regulatory discards of juvenile individuals with no quota
+penalty may result in a lesser net benefit.
+
+Challenges in this chapter include acquiring spatially and temporally
+explicit data for bycatch of juvenile sablefish, and estimating the
+costs and benefits for the decision analysis. For data acquisition, the
+privacy act creates a limit on the resolution of commercial data,
+requiring creativity an perspiration in choosing an aggregation scale.
+Estimates of the costs and benefits of fishing may exist in the
+literature for other fisheries, but this may be best informed by asking
+skippers directly.
 
 \section{Conclusion}\label{conclusion}
 
-This thesis will undertake a study of stock assessment methods for
-assemblages of multiple interacting species. The focus is on the Robin
-Hood (RH) method, which contains a hierarchical statistical model
-linking the data of multiple species. The RH method could prove valuable
-for data-variable fisheries that are unable to produce stock assessments
-for all species that they contain. Those species that were previously
-unable to be assessed could potentially fall inside the stable risk
-region of the RH method allowing scientifically defensible TACs to be
-set. This would help some fisheries obtain eco-certification (MSC,
-Seafood Watch, seaChoice), helping to improve biological sustainability
-of market share.
+This thesis is a study of assessment and avoidance tools that may
+improve management of integrated multispecies fisheries, in which
+technical interactions cause constraints on fishery profitability.
+Profitability is constrained when the effort targeting directed, high
+value species encounters non-target species with restrictive quota.
+Restrictive species quota may be caused by data limitations precluding
+regular assessments, or conservation concerns requiring rebuilding
+strategies. In either case, those species become pinch-points on the
+efficient management of the fishery.
 
-Further to contributions to the field of fisheries science, this thesis
-also satisfies the interdisciplinary spirit of REM in two chapters.
-First, assessing multiple species simultaneously using the RH approach
-brings possible advantages, such as an efficient allocation of survey
-resources. Such advantages are to be tested in Chapter 2 through
-management strategy evaluation, synthesising ecological drivers of
-population dynamics and economic drivers of fishing effort. The other
-methods - single species (SS) and total aggregation (TA) - are analysed
-as alternatives to the RH method in a risk assessment in Chapter 3. The
-risk assessment is intended to recommend data-requirements and harvest
-control rules for stable social and biological risk, synthesising
-economics, ecology and policy.
+Hierarchical assessment models studied in Chapters 1, 2 and 3 may
+overcome data limitations and allow assessments to be extended to
+species that were previously unassessed. Extending assessments to
+previously unassessed species may or may not relieve pinch points by
+reducing uncertainty about stock status, but will always increase
+scientific defensibilty. Indeed, up-to-date and regular assessments of
+non-target species allows for improved ratings by eco-certification
+bodies (Driscoll (2014)). Improved eco-certification then creates follow
+on benefits by improving access to foreign and domestic markets,
+increasing market share of the fishery.
 
-\subsection{Resource allocation improvement (taken from
-intro)}\label{resource-allocation-improvement-taken-from-intro}
+Closed loop simulations of hierarchical assessment models studied in
+Chapter 3 may have further benefits in multispecies fishery management,
+specifically in improving the allocation of scientific resources. By
+assessing groups of multiple species with similar life and evolutionary
+histories, it may be possible to take biological samples more
+efficiently. For example, age and length sampling may occur only for
+higher value species in a group, with lower value species sampled for
+length only. Then length and age can be related through a shared
+multispecies prior defined in the hierarchical assessment model. If
+model stability is an issue, low frequency age sampling of the lower
+value species may be necessary. Closed loop simulation can assess the
+potential risks associated with these and other survey design
+modifications.
 
-Efficient allocation of resources is therefore an important part of the
-sustainable management of multispecies fisheries. This para needs refs,
-better ideas and structure. Does it even go here? Maybe combine it with
-the following paragraph on multispecies assessments. Also, include
-information here about ``good enough'' mechanisms for resource
-distribution • SARA, PA state that at a given level of biological risk,
-a recovery process has to be implemented. • Are expensive, model based
-assessments required for every species? • What constitutes ``good
-enough'' management? • There are two parts to resource allocation 1.
-Identification of need - pinch-point species are an externality on
-directed species 2. Mechanisms for resource distribution - good enough
-MPs: Swept-area, total Agg, RH\ldots{} • A paralysis of choice is common
-in situations like this.
-
-I propose a practical, stake-holder driven management approach that
-seeks to to satisfy conservation concerns while increasing economic
-welfare in multispecies fisheries. Assessment techniques should be
-\emph{practical} in that they achieve conservation and management goals
-efficiently, such as reserving the most technologically advanced and
-resource intensive management procedures for those stocks that
-absolutely need it. Management decisions should be \emph{stake-holder
-driven}, where priority is given to actions that increase the economic
-welfare of the fishery. This will allow for positive economic feedback
-and increase the pool of resources available for future management of
-the fishery. The goal of a practical, stake-holder driven management
-approach is to simultaneously improve the sustainability
-(intergenerational equity) and profitability of multispecies fisheries.
+Avoidance techniques are necessary when assessment methods are unable to
+relieve pinch-point effects of low quota species. The machine learning
+methods studied in Chapter 4 are a novel approach to the avoidance
+problem, combining technological and fleet communication approaches. A
+centralised communication system can use reported observer data to
+provide near-real-time information to harvesters, detailing the
+probability of non-target species encounter under given conditions. The
+system is not unique to juvenile Sablefish and could be extended to any
+non-target species encountered, which would change the expected net
+economic benefit of the product.
 
 \section*{References}
 \setlength{\parindent}{-0.2in}
