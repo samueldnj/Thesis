@@ -60,62 +60,14 @@
 
 
 
+
 \newpage
 
 \section{Figures and Tables}\label{figures-and-tables}
 
-\begin{landscape}
-\begin{figure}[htbp]
-\centering
-\includegraphics{figures/mscMSE.pdf}
-\caption{A simplified fishery managment system divided into 5 discrete units. (1) Applied Population Ecology, (2) Fisheries Data Science, (3) Stock Assessment Modeling, (4) Risk Assessment, (5) Management Strategy Evaluation.}\label{fig:fishMgmt}
-\end{figure}
-\end{landscape}
+\listoftables
 
-\newpage
-
-\begin{figure}[htbp]
-\centering
-\includegraphics{figures/WeakStrongDist.pdf}
-\caption{A conceptual model of the distribution of stock productivities in Pacific salmon. Harvesting according to the average productivity level leads to overfishing of the weakest stocks.}\label{fig:ppHCR}
-\end{figure}
-
-\newpage
-
-\begin{figure}[htbp]
-\centering
-\includegraphics{figures/ppHCR.pdf}
-\caption{A harvest control rule showing how the presence of pinch-point species affects the harvesting of directed species. The solid black line is the normal harvest control rule for a high productivity directed species, set by stock assessment, while the dashed black line shows the effective harvest control rule in the presence of technical interactions with pinch-point species. For a given stock biomass $B$ the directed species quota is $Q$, but pinch-point species reduce that to an effective or utilised quota of $Q_P$. The reduction in resources caused by the pinch-point species is then $Q - Q_P$.}\label{fig:ppHCR}
-\end{figure}
-
-\newpage
-
-\begin{figure}[htbp]
-\centering
-\includegraphics{figures/bocaccio.pdf}
-\caption{Quota utilisation of Bocaccio rockfish in the BC integrated groundfish fishery. The black line represents the average annual total allowable catch (taken from the Pacific Region Integrated Fishery Management Plan) and the coloured polygons represent the biomass of removals in each management area.}\label{fig:bocaccio}
-\end{figure}
-
-\newpage
-
-\begin{figure}[htbp]
-\begin{center}
-\includegraphics{figures/lingcod.pdf}
-\caption{Quota utilisation of lingcod in the BC integrated groundfish fishery. The black line represents the average annual total allowable catch (taken from the Pacific Region Integrated Fishery Management Plan) and the coloured polygons represent the biomass of removals in each management area.}\label{fig:lingcod}
-\end{center}
-\end{figure}
-
-\newpage
-
-\begin{landscape}
-\begin{figure}[htbp]
-\begin{center}
-\includegraphics{figures/msFishery.pdf}
-\caption{Three models of fishery management: (a) status quo,
-single species approach; (b) hierarchical multi-species model; (c) total aggregation of species}\label{fig:3Models}
-\end{center}
-\end{figure}
-\end{landscape}
+\listoffigures
 
 \newpage
 
@@ -234,22 +186,6 @@ $\kappa^2$ & Multispecies prior variance on $\log$ catchability \\
 
 \newpage
 
-\begin{figure}[htbp]
-\centering
-\includegraphics{figures/HBMClarkCh1.pdf}
-\caption{A conceptual diagram of the hierarchical model used for estimation in Chapter 1.  Part (a) shows the individual species process and observation models, with species specific parameters and hyperparameters. Part (b) compresses the time series into bold italicised variables, and shows the hierarchically arranged multispecies assemblage with shared multispecies parameters and hyperparameters.}\label{fig:HBMCh1}
-\end{figure}
-
-\newpage
-
-\begin{figure}[htbp]
-\centering
-\includegraphics{figures/Ft.pdf}
-\caption{Three instantaneous fishing mortality $F_t$ trends over 40 years of management history. The black line shows a steady linear increase over the time period to a (fully selected) maximum of $F_t = 1$. The red line shows a fishery that developed over 20 years and then held fishing mortality steady at $F_t = 1$ for the following 20. Both trajectories correspond to developmental periods of a fishery, which provides little information about a stock's response to alleviating fishing pressure. Finally, the blue line shows a more informative sawtooth pattern, with periods of increasing and decreasing fishing pressure over the 40 year management period. Here, stock dynamics will respond to the changes in fishing pressure and provide more information about productivity than the other two cases.}\label{fig:HBMCh1}
-\end{figure}
-
-\newpage
-
 \begin{table}[htbp]
 \begin{center}
 \caption{Variable definitions for simulation and estimation of a multispecies spatially structured multistock fishery used in Chapter 2. The population dynamics are driven by a simple Biomass Dynamics model (Hilborn and Walters, 1992, Ch, 8), with immigration and emigration between stocks of a species summarised by a migration rate $\phi_{s,p,p'}$. Catch is determined by instantaneous fishing mortality for each individual stock, which is defined as an input to the model.}\label{tab:Ch2spec}
@@ -329,7 +265,7 @@ $\rho_s^2$ & Species specific prior variance for stock specific $\log$ intrinsic
 & \textbf{ State Dynamics ($2 \leq t \leq T$)} \\
 (T5.4) & $B_{s,p,t} = \left ( B_{s,p,t-1} + r_{s,p}B_{s,p,t-1}\left( 1 - \frac{B_{s,p,t-1}}{B_{s,0}} \right) + \sum_{p' \neq p} \phi_{s,p,p
 '} \cdot B_{s,p',t-1} - C_{s,p,{t-1} } \right) \cdot$ \\ 
-& ~~~~~~~~~~~~~~~~~~~~~~~~~$e^{(\xi_{s,p,t} - \Sigma^{(P)}_{(s,p)}/2) + (\zeta_{s,t} - \Sigma^{(S)}_{(s)}/2) + (\epsilon_{t} - \sigma^2/2)}$ \\
+& ~~~~~~~~~~~~~~~~~~~~~~$e^{(\xi_{s,p,t} - \Sigma^{(P)}_{(s,p)}/2) + (\zeta_{s,t} - \Sigma^{(S)}_{(s)}/2) + (\epsilon_{t} - \sigma^2/2)}$ \\
 & \\
 & \textbf{ Observation model ($1 \leq t \leq T$)} \\
 (T5.5) & $I_{s,p,t} = q_{s,p} \cdot B_{s,p,t} \cdot e^{\delta_{s,p,t} - \tau_{s,p}^2/2}$ \\
@@ -390,14 +326,6 @@ $\rho_s^2$ & Species specific prior variance for stock specific $\log$ intrinsic
 
 \newpage
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[scale = 0.4]{figures/HBMClarkCh2.pdf}
-\caption{A conceptual diagram of the hierarchical model used for estimation in Chapter 2. Part (b) shows the hierarchically arranged species meta-population with species parameters and hyperparameters, where the time series in part (a) are compressed into bold, italicised symbols. Part (c) shows the hierarchically arranged multispecies assemblage, with shared multispecies parameters and hyperparameters.}\label{fig:HBMCh2}
-\end{figure}
-
-\newpage
-
 \begin{table}[htbp]
 \begin{center}
 \caption{Variable definitions for the operating model simulation catch, effort, population dynamics and scientific observations in Chapter 3. The population dynamics are driven by a simple Biomass Dynamics model (Hilborn and Walters, 1992, Ch, 8), with immigration and emigration between stocks of a species summarised by a migration rate $\phi_{s,i,p}$. Catch is based on effort dynamics simulating targeting behaviour of harvesters.}\label{tab:OMspec}
@@ -450,6 +378,85 @@ $\delta_{s,p,t}$ & Observation error for stock $p$ of species $s$ at time $t$ $\
 
 \newpage
 
+\begin{landscape}
+\begin{figure}[htbp]
+\centering
+\includegraphics{figures/mscMSE.pdf}
+\caption{A simplified fishery managment system divided into 5 discrete units. (1) Applied Population Ecology, (2) Fisheries Data Science, (3) Stock Assessment Modeling, (4) Risk Assessment, (5) Management Strategy Evaluation.}\label{fig:fishMgmt}
+\end{figure}
+\end{landscape}
+
+\newpage
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{figures/WeakStrongDist.pdf}
+\caption{A conceptual model of the distribution of stock productivities in Pacific salmon. Harvesting according to the average productivity level leads to overfishing of the weakest stocks.}\label{fig:ppHCR}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{figures/ppHCR.pdf}
+\caption{A harvest control rule showing how the presence of pinch-point species affects the harvesting of directed species. The solid black line is the normal harvest control rule for a high productivity directed species, set by stock assessment, while the dashed black line shows the effective harvest control rule in the presence of technical interactions with pinch-point species. For a given stock biomass $B$ the directed species quota is $Q$, but pinch-point species reduce that to an effective or utilised quota of $Q_P$. The reduction in resources caused by the pinch-point species is then $Q - Q_P$.}\label{fig:ppHCR}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{figures/bocaccio.pdf}
+\caption{Quota utilisation of Bocaccio rockfish in the BC integrated groundfish fishery. The black line represents the average annual total allowable catch (taken from the Pacific Region Integrated Fishery Management Plan) and the coloured polygons represent the biomass of removals in each management area.}\label{fig:bocaccio}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics{figures/lingcod.pdf}
+\caption{Quota utilisation of lingcod in the BC integrated groundfish fishery. The black line represents the average annual total allowable catch (taken from the Pacific Region Integrated Fishery Management Plan) and the coloured polygons represent the biomass of removals in each management area.}\label{fig:lingcod}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{landscape}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics{figures/msFishery.pdf}
+\caption{Three models of fishery management: (a) status quo,
+single species approach; (b) hierarchical multi-species model; (c) total aggregation of species}\label{fig:3Models}
+\end{center}
+\end{figure}
+\end{landscape}
+
+\newpage
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{figures/HBMClarkCh1.pdf}
+\caption{A conceptual diagram of the hierarchical model used for estimation in Chapter 1.  Part (a) shows the individual species process and observation models, with species specific parameters and hyperparameters. Part (b) compresses the time series into bold italicised variables, and shows the hierarchically arranged multispecies assemblage with shared multispecies parameters and hyperparameters.}\label{fig:HBMCh1}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{figures/Ft.pdf}
+\caption{Three instantaneous fishing mortality $F_t$ trends over 40 years of management history. The black line shows a steady linear increase over the time period to a (fully selected) maximum of $F_t = 1$. The red line shows a fishery that developed over 20 years and then held fishing mortality steady at $F_t = 1$ for the following 20. Both trajectories correspond to developmental periods of a fishery, which provides little information about a stock's response to alleviating fishing pressure. Finally, the blue line shows a more informative sawtooth pattern, with periods of increasing and decreasing fishing pressure over the 40 year management period. Here, stock dynamics will respond to the changes in fishing pressure and provide more information about productivity than the other two cases.}\label{fig:HBMCh1}
+\end{figure}
+
+\newpage
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[scale = 0.4]{figures/HBMClarkCh2.pdf}
+\caption{A conceptual diagram of the hierarchical model used for estimation in Chapter 2. Part (b) shows the hierarchically arranged species meta-population with species parameters and hyperparameters, where the time series in part (a) are compressed into bold, italicised symbols. Part (c) shows the hierarchically arranged multispecies assemblage, with shared multispecies parameters and hyperparameters.}\label{fig:HBMCh2}
+\end{figure}
+
+\newpage
+
 \begin{figure}[htbp]
 \centering
 \includegraphics{figures/MSE.pdf}
@@ -466,7 +473,7 @@ $\delta_{s,p,t}$ & Observation error for stock $p$ of species $s$ at time $t$ $\
 \centering
 \includegraphics{figures/sabComposition.pdf}
 \caption{The top 15 species ranked by total catch weight (000s t) co-occurring in sets that caught Sablefish by bottom trawl gear from Jan 2009 to March 31, 2012 (left panel) and Apr 2012 to Mar 31, 2015 (right panel). Note that the bars for some top-ranked species have been truncated to fit on the plot; actual total catch weights are indicated to the right of the truncated bars for those species. This composition shows technical interactions between 3 DERPA species in trawl gear that encounters Sablefish.}\label{fig:catchComposition}
-\end{figure}\newpage
+\end{figure}
 
 \newpage
 

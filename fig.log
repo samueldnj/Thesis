@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  7 MAY 2016 13:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 AUG 2016 15:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -667,19 +667,13 @@ Package hyperref Warning: Option `bookmarks' has already been used,
 Package hyperref Info: Option `colorlinks' set `true' on input line 49.
 (./fig.aux
 
+LaTeX Warning: Label `tab:Ch2est' multiply defined.
+
+
 LaTeX Warning: Label `fig:ppHCR' multiply defined.
 
 
 LaTeX Warning: Label `fig:HBMCh1' multiply defined.
-
-
-LaTeX Warning: Label `tab:OMspec' multiply defined.
-
-
-LaTeX Warning: Label `tab:Ch2est' multiply defined.
-
-
-LaTeX Warning: Label `tab:OMspec' multiply defined.
 
 )
 \openout1 = `fig.aux'.
@@ -782,162 +776,148 @@ LaTeX Info: Redefining \nameref on input line 57.
 \@outlinefile=\write3
 \openout3 = `fig.out'.
 
- [1
-
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] <figure
-s/mscMSE.pdf, id=15, 803.0pt x 301.125pt>
-File: figures/mscMSE.pdf Graphic file (type pdf)
-
-<use figures/mscMSE.pdf>
-Package pdftex.def Info: figures/mscMSE.pdf used on input line 70.
-(pdftex.def)             Requested size: 650.43001pt x 243.92828pt.
- [2
-
- <./figures/mscMSE.pdf>]
-<figures/WeakStrongDist.pdf, id=37, 505.89pt x 505.89pt>
-File: figures/WeakStrongDist.pdf Graphic file (type pdf)
-
-<use figures/WeakStrongDist.pdf>
-Package pdftex.def Info: figures/WeakStrongDist.pdf used on input line 79.
-(pdftex.def)             Requested size: 469.75502pt x 469.76265pt.
-
-<figures/ppHCR.pdf, id=38, 614.295pt x 401.5pt>
-File: figures/ppHCR.pdf Graphic file (type pdf)
- <use figures/ppHCR.pdf>
-Package pdftex.def Info: figures/ppHCR.pdf used on input line 87.
-(pdftex.def)             Requested size: 469.75502pt x 307.03009pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 88.
+ (./fig.lot
+LaTeX Font Info:    Try loading font information for U+msa on input line 1.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 88.
+LaTeX Font Info:    Try loading font information for U+msb on input line 1.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-<figures/bocaccio.pdf, id=39, 535.64827pt x 392.41626pt>
+) [1
+
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+\tf@lot=\write4
+\openout4 = `fig.lot'.
+
+ (./fig.lof [2]
+[3])
+\tf@lof=\write5
+\openout5 = `fig.lof'.
+
+ [4] [5] [6] [7] [8] [9] [10] [11]
+<figures/mscMSE.pdf, id=196, 803.0pt x 301.125pt>
+File: figures/mscMSE.pdf Graphic file (type pdf)
+ <use figures/mscMSE.pdf>
+Package pdftex.def Info: figures/mscMSE.pdf used on input line 384.
+(pdftex.def)             Requested size: 650.43001pt x 243.92828pt.
+
+[12
+
+ <./figures/mscMSE.pdf>]
+<figures/WeakStrongDist.pdf, id=217, 505.89pt x 505.89pt>
+File: figures/WeakStrongDist.pdf Graphic file (type pdf)
+
+<use figures/WeakStrongDist.pdf>
+Package pdftex.def Info: figures/WeakStrongDist.pdf used on input line 393.
+(pdftex.def)             Requested size: 469.75502pt x 469.76265pt.
+
+<figures/ppHCR.pdf, id=218, 614.295pt x 401.5pt>
+File: figures/ppHCR.pdf Graphic file (type pdf)
+ <use figures/ppHCR.pdf>
+Package pdftex.def Info: figures/ppHCR.pdf used on input line 401.
+(pdftex.def)             Requested size: 469.75502pt x 307.03009pt.
+
+<figures/bocaccio.pdf, id=219, 535.64827pt x 392.41626pt>
 File: figures/bocaccio.pdf Graphic file (type pdf)
 
 <use figures/bocaccio.pdf>
-Package pdftex.def Info: figures/bocaccio.pdf used on input line 95.
+Package pdftex.def Info: figures/bocaccio.pdf used on input line 409.
 (pdftex.def)             Requested size: 469.75502pt x 344.15376pt.
 
-<figures/lingcod.pdf, id=40, 535.64827pt x 392.41626pt>
+<figures/lingcod.pdf, id=220, 535.64827pt x 392.41626pt>
 File: figures/lingcod.pdf Graphic file (type pdf)
 
 <use figures/lingcod.pdf>
-Package pdftex.def Info: figures/lingcod.pdf used on input line 103.
+Package pdftex.def Info: figures/lingcod.pdf used on input line 417.
 (pdftex.def)             Requested size: 469.75502pt x 344.15376pt.
- [3 <./figures/WeakStrongDist.pdf>] [4 <./figures/ppHCR.pdf>] [5 <./figures/boc
-accio.pdf>] [6 <./figures/lingcod.pdf>]
-<figures/msFishery.pdf, id=329, 2007.5pt x 702.625pt>
+ [13 <./figures/WeakStrongDist.pdf>] [14 <./figures/ppHCR.pdf>] [15 <./figures/
+bocaccio.pdf>] [16 <./figures/lingcod.pdf>]
+<figures/msFishery.pdf, id=503, 2007.5pt x 702.625pt>
 File: figures/msFishery.pdf Graphic file (type pdf)
 
 <use figures/msFishery.pdf>
-Package pdftex.def Info: figures/msFishery.pdf used on input line 113.
+Package pdftex.def Info: figures/msFishery.pdf used on input line 427.
 (pdftex.def)             Requested size: 650.43001pt x 227.65353pt.
- [7
+ [17
 
 
- <./figures/msFishery.pdf>] [8
-
-]
-
-LaTeX Warning: Reference `tab:Ch1spec' on page 9 undefined on input line 172.
-
-
-LaTeX Warning: Reference `tab:Ch1spec' on page 9 undefined on input line 172.
-
-[9] [10] <figures/HBMClarkCh1.pdf, id=375, 853.1875pt x 1003.75pt>
+ <./figures/msFishery.pdf>]
+<figures/HBMClarkCh1.pdf, id=524, 853.1875pt x 1003.75pt>
 File: figures/HBMClarkCh1.pdf Graphic file (type pdf)
 
 <use figures/HBMClarkCh1.pdf>
-Package pdftex.def Info: figures/HBMClarkCh1.pdf used on input line 239.
+Package pdftex.def Info: figures/HBMClarkCh1.pdf used on input line 438.
 (pdftex.def)             Requested size: 469.75502pt x 552.66153pt.
- <figures/Ft.pdf, id=376, 505.89pt x 505.89pt>
+ <figures/Ft.pdf, id=525, 505.89pt x 505.89pt>
 File: figures/Ft.pdf Graphic file (type pdf)
 
 <use figures/Ft.pdf>
-Package pdftex.def Info: figures/Ft.pdf used on input line 247.
+Package pdftex.def Info: figures/Ft.pdf used on input line 446.
 (pdftex.def)             Requested size: 469.75502pt x 469.76265pt.
 
-
-LaTeX Warning: Reference `tab:Ch2spec' on page 11 undefined on input line 312.
-
-
-LaTeX Warning: Reference `tab:Ch2spec' on page 11 undefined on input line 312.
-
-
-LaTeX Warning: Reference `tab:Ch2spec' on page 11 undefined on input line 346.
-
-
-LaTeX Warning: Reference `tab:Ch2spec' on page 11 undefined on input line 346.
-
-<figures/HBMClarkCh2.pdf, id=377, 853.1875pt x 1505.625pt>
+<figures/HBMClarkCh2.pdf, id=526, 853.1875pt x 1505.625pt>
 File: figures/HBMClarkCh2.pdf Graphic file (type pdf)
 
 <use figures/HBMClarkCh2.pdf>
-Package pdftex.def Info: figures/HBMClarkCh2.pdf used on input line 395.
+Package pdftex.def Info: figures/HBMClarkCh2.pdf used on input line 454.
 (pdftex.def)             Requested size: 341.26895pt x 602.23933pt.
 
 
-LaTeX Warning: Float too large for page by 33.88939pt on input line 397.
+LaTeX Warning: Float too large for page by 33.88939pt on input line 456.
 
-<figures/MSE.pdf, id=378, 614.295pt x 702.625pt>
+<figures/MSE.pdf, id=527, 614.295pt x 702.625pt>
 File: figures/MSE.pdf Graphic file (type pdf)
  <use figures/MSE.pdf>
-Package pdftex.def Info: figures/MSE.pdf used on input line 455.
+Package pdftex.def Info: figures/MSE.pdf used on input line 462.
 (pdftex.def)             Requested size: 469.75502pt x 537.30267pt.
 
-<figures/ManagementAreas.pdf, id=379, 578.16pt x 433.62pt>
+<figures/ManagementAreas.pdf, id=528, 578.16pt x 433.62pt>
 File: figures/ManagementAreas.pdf Graphic file (type pdf)
 
 <use figures/ManagementAreas.pdf>
-Package pdftex.def Info: figures/ManagementAreas.pdf used on input line 461.
+Package pdftex.def Info: figures/ManagementAreas.pdf used on input line 468.
 (pdftex.def)             Requested size: 469.75502pt x 352.31538pt.
 
-<figures/sabComposition.pdf, id=380, 1078.0275pt x 584.1825pt>
+<figures/sabComposition.pdf, id=529, 1078.0275pt x 584.1825pt>
 File: figures/sabComposition.pdf Graphic file (type pdf)
 
 <use figures/sabComposition.pdf>
-Package pdftex.def Info: figures/sabComposition.pdf used on input line 467.
+Package pdftex.def Info: figures/sabComposition.pdf used on input line 474.
 (pdftex.def)             Requested size: 469.75502pt x 254.56302pt.
 
-<figures/gantt.pdf, id=381, 614.295pt x 250.9375pt>
+<figures/gantt.pdf, id=530, 614.295pt x 401.5pt>
 File: figures/gantt.pdf Graphic file (type pdf)
  <use figures/gantt.pdf>
-Package pdftex.def Info: figures/gantt.pdf used on input line 475.
-(pdftex.def)             Requested size: 469.75502pt x 191.8938pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 479.
+Package pdftex.def Info: figures/gantt.pdf used on input line 482.
+(pdftex.def)             Requested size: 469.75502pt x 307.03009pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 486.
 
-[11 <./figures/HBMClarkCh1.pdf>] [12 <./figures/Ft.pdf>] [13] [14] [15]
-[16 <./figures/HBMClarkCh2.pdf>] [17] [18 <./figures/MSE.pdf>] [19 <./figures/M
-anagementAreas.pdf>] [20 <./figures/sabComposition.pdf> <./figures/gantt.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 479.
-
-(./fig.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 479.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 479.
+[18 <./figures/HBMClarkCh1.pdf>] [19 <./figures/Ft.pdf>] [20 <./figures/HBMClar
+kCh2.pdf>] [21 <./figures/MSE.pdf>] [22 <./figures/ManagementAreas.pdf>]
+[23 <./figures/sabComposition.pdf>] [24 <./figures/gantt.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 486.
+ (./fig.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 486.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 486.
 Package rerunfilecheck Info: File `fig.out' has not changed.
 (rerunfilecheck)             Checksum: 4F72A5C98656660027392C90AA081851;140.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 479.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 486.
  ) 
 Here is how much of TeX's memory you used:
- 12256 strings out of 493089
- 175043 string characters out of 6134842
- 348304 words of memory out of 5000000
- 15579 multiletter control sequences out of 15000+600000
+ 12292 strings out of 493089
+ 175726 string characters out of 6134842
+ 347907 words of memory out of 5000000
+ 15603 multiletter control sequences out of 15000+600000
  12974 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,13n,46p,913b,356s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,13n,46p,913b,399s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
@@ -952,10 +932,10 @@ exlive/2015/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/local
 /texlive/2015/texmf-dist/fonts/type1/public/mathabx-type1/matha6.pfb></usr/loca
 l/texlive/2015/texmf-dist/fonts/type1/public/mathabx-type1/matha8.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb>
-Output written on fig.pdf (20 pages, 1274028 bytes).
+Output written on fig.pdf (24 pages, 1286383 bytes).
 PDF statistics:
- 665 PDF objects out of 1000 (max. 8388607)
- 509 compressed objects within 6 object streams
- 42 named destinations out of 1000 (max. 500000)
+ 793 PDF objects out of 1000 (max. 8388607)
+ 628 compressed objects within 7 object streams
+ 48 named destinations out of 1000 (max. 500000)
  74 words of extra memory for PDF output out of 10000 (max. 10000000)
 

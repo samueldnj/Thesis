@@ -7,23 +7,23 @@ gantt
 dateFormat  YYYY-MM-DD
 title PhD Gantt Chart
 section Degree Req's
-Coursework                         :crit,done,    samDR_1, 2014-09-01, 2015-04-30
-Develop Thesis proposal			       :crit,active,  samDR_2, 2015-05-01, 2015-10-30
-Defend Proposal/Comprehensive Exam :crit,         samDR_3, 2015-11-15, 2d
-Proposal Revisions                 :crit,         samDR_4, 2015-11-16, 2w
+Coursework                         :crit,done,    samDR_1, 2014-09-01, 2015-12-15
+Develop Thesis proposal			       :crit,active,  samDR_2, 2015-05-01, 2016-04-30
+Defend Proposal/Comprehensive Exam :crit,         samDR_3, 2016-06-29, 2d
+Proposal Revisions                 :crit,         samDR_4, 2016-06-30, 1w
 
 section Research
-Ch 1 - Bias and Precision          : samRE_1, 2016-01-01, 2016-03-31
-Prepare Ch 1 Manuscript            : samRE_2, 2016-04-01, 2016-04-30
-Ch 2 - MSE (economics)             : samRE_3, 2016-05-01, 2016-10-31
-Prepare Ch 2 Manuscripts           : samRE_4, 2016-11-01, 2016-12-31
-Ch 3 - Risk Analysis (policy)      : samRE_5, 2017-01-01, 2017-04-30
-Prepare Ch 4 Manuscript            : samRE_6, 2017-05-01, 2017-06-30
-Ch 4 - Application                 : samRE_7, 2017-07-01, 2018-04-30
-Prepare Ch 4 Manuscript            : samRE_8, 2018-05-01, 2018-06-15
+Ch 4 - Avoidance 					         : samRE_1, after samDR_4, 16w
+Prepare Ch 4 Manuscript            : samRE_2, after samRE_1, 4w
+Ch 1 - Multispecies Sim-Est	       : samRE_3, after samRE_1, 16w
+Prepare Ch 1 Manuscript     	     : samRE_4, after samRE_3, 4w
+Ch 2 - Multistock Sim-Est			 	   : samRE_5, after samRE_3, 16w
+Prepare Ch 2 Manuscript            : samRE_6, after samRE_5, 4w
+Ch 3 - Closed Loop Simulation      : samRE_7, after samRE_5, 16w
+Prepare Ch 3 Manuscript            : samRE_8, after samRE_7, 4w
 
 section Thesis
-Finish Writing Thesis              :crit,         samTH_1, after samRE_7, 12w 
+Finish Writing Thesis              :crit,         samTH_1, after samRE_8, 12w 
 Defend Thesis                      :crit,         samTH_2, after samTH_1, 4w
 " )
 
